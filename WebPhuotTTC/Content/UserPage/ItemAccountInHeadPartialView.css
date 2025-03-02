@@ -1,0 +1,14 @@
+﻿
+header .login {
+    flex-direction: column;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+    header .login-ed {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 10px;
+        column-gap:5px;
+    }
+

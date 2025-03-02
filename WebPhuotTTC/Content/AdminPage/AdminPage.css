@@ -1,0 +1,142 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100vw;
+    height: 100%;
+    padding: 0px;
+    position:fixed;
+}
+/*Header Admin*/
+.admin_header {
+    height: 80px;
+    padding: 0px 50px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: #00a6e6;
+}
+/*Header logo*/
+.admin_header-logo {
+    display: flex;
+    align-items: center;
+}
+
+    .admin_header-logo > img {
+        width: 80px;
+    }
+
+    .admin_header-logo > h2 {
+        height: fit-content;
+    }
+/**/
+/*Header navigation*/
+.admin_header-nav {
+    display: flex;
+    list-style: none;
+    column-gap: 30px;
+    align-items: center;
+}
+
+    .admin_header-nav > li i {
+        font-size: 25px;
+    }
+
+.admin_header-nav-account {
+    position: relative;
+}
+
+.admin_header-nav-account-details {
+    width: 200px;
+    height: 100px;
+    background-color: #00a6e6;
+    position: absolute;
+    top: 55px;
+    right: -20px;
+    z-index: 2;
+    padding: 0px 0px 20px;
+    border-radius: 10px;
+}
+
+    .admin_header-nav-account-details ul {
+        list-style: none;
+    }
+
+        .admin_header-nav-account-details ul li {
+            height: fit-content;
+            padding: 10px 20px 10px 20px;
+        }
+
+            .admin_header-nav-account-details ul li:hover {
+                background-color: blue;
+            }
+
+            .admin_header-nav-account-details ul li i {
+                font-size: 15px;
+                margin-right: 5px;
+            }
+/**/
+/**/
+.admin_content {
+    display: flex;
+}
+
+.admin_content-left {
+    width: 20%;
+    height: 100vh;
+    background-color: #00a6e6;
+    color: white;
+    list-style: none;
+    padding:0px;
+}
+
+.menu_item {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    border-top: 1px solid gray;
+    line-height: 50px;
+    font-size: larger;
+    text-align: left;
+}
+
+    .menu_item:hover {
+        background-color: blue;
+    }
+
+    .menu_item > a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 10px;
+    }
+
+        .menu_item > a > div {
+            padding-left: 10%;
+        }
+
+            .menu_item > a > div > i {
+                margin-right: 20px;
+            }
+
+.item_menu_clicked {
+    background-color: blue;
+}
+
+.submenu_item > a > div {
+    padding-left: 80px;
+}
+
+.hide_element {
+    display: none;
+}
+
+.admin_content-right {
+    width: 80%;
+    padding: 10px;
+}

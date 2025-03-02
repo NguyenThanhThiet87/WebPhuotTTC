@@ -1,0 +1,242 @@
+﻿@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_UserPage.cshtml";
+}
+@model WebPhuotTTC.Models.ProductDetail
+<link href="~/Content/UserPage/Product/Detail.css" rel="stylesheet" />
+<div class="product-detail">
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="@Url.Action("Index","User")">Home</a></li>
+            <li class="breadcrumb-item" onclick="history.back()">Quay Lại</li>
+            <li class="breadcrumb-item active" aria-current="page">@Model.product.TenSanPham</li>
+        </ol>
+    </nav>
+
+    <!-- Product Container -->
+    <div class="product-container">
+        <!-- Hình ảnh sản phẩm -->
+        <div class="product-image">
+            <img id="main-image" src="@Model.product.AnhBia" alt="img">
+            <div class="gallery-container">
+                <div class="image-gallery swiper mySwiper">
+                    <!-- Swiper -->
+                    <div class="swiper-wrapper">
+                        @foreach (var item in Model.images)
+                        {
+                            <img class="image-item swiper-slide" src="@item.Url" alt="Thumbnail" onclick="ImageClicked(event)" />
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thông tin sản phẩm -->
+        @using (Html.BeginForm("MuaNgay", "Cart", new { MaSP = Model.product.MaSanPham }))
+        {
+            <div class="product-info">
+                <h1>@Model.product.TenSanPham</h1>
+
+                <!-- Tùy chọn -->
+                <div class="options">
+                    <div class="option-group">
+                        <label>Màu sắc:</label>
+                        <select name="color">
+                            @foreach (var i in Model.detailProduct)
+                            {
+                                <option value="@i.MAUSAC.MaMau">@i.MAUSAC.TenMau</option>
+
+                            }
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <label>Kích thước:</label>
+                        <select name="size">
+                            @foreach (var i in Model.detailProduct)
+                            {
+                                <option value="@i.KICHTHUOC.MaKichThuoc">@i.KICHTHUOC.MaKichThuoc</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Giá và khuyến mãi -->
+                <div class="price">
+                    <span class="current-price">@String.Format("{0:N0}", Model.product.Gia - (Model.discount != null ? ((Model.product.Gia / 100) * Model.discount.TiLeGiamGia) : 0)).Replace(',', '.')&#8363;</span>
+                    <span class="old-price">@String.Format("{0:N0}", @Model.product.Gia).Replace(',', '.')&#8363;</span>
+                    @if (Model.discount.TiLeGiamGia > 0 && Model.discount != null)
+                    {
+                        <span class="discount">@Model.discount.TiLeGiamGia</span>
+                    }
+                </div>
+
+                <div class="promotion">
+                    <p>Khuyến mãi:</p>
+                    <ul>
+                        <li>Giảm ngay 100.000₫</li>
+                        <li>Tặng phiếu mua hàng 2.000.000₫ áp dụng đến 30/09</li>
+                        <li>Trả góp 0%</li>
+                    </ul>
+                </div>
+
+                <!-- Nút hành động -->
+                <div class="actions">
+                    @if (Session["IDUSER"] != null)
+                    {
+                        <button class="buy-now" type="submit">Mua ngay</button>
+                       // <a href="@Url.Action("ThemVaoGioHang", "Cart", new { maSP = Model.product.MaSanPham, maKT = Model.detailProduct[0].MaKichThuoc, maMAU = Model.detailProduct[0].MaMau, Url = Request.Url.ToString() })">
+                            <button class="add-to-cart" type="button" onclick="muaNgay('@Model.product.MaSanPham')">Thêm vào giỏ</button>
+                       // </a>
+                    }
+                    else
+                    {
+                        <button class="buy-now" type="button" onclick="toastr.warning('Bạn chưa đăng nhập');">Mua ngay</button>
+                        <button class="add-to-cart" type="button" onclick="toastr.warning('Bạn chưa đăng nhập');">Thêm vào giỏ</button>
+                    }
+                </div>
+
+            </div>
+        }
+
+    </div>
+
+    <!-- Thông số kỹ thuật -->
+    <div class="product-details">
+        <h2>Thông số kỹ thuật</h2>
+        <table>
+            <tr>
+                <th>Thông số</th>
+                <th>Chi tiết</th>
+            </tr>
+            <tr><td>Chất liệu</td><td>Nhựa ABS cao cấp</td></tr>
+            <tr><td>Trọng lượng</td><td>1.5 kg</td></tr>
+            <tr><td>Tiêu chuẩn</td><td>DOT, ECE</td></tr>
+            <tr><td>Chống nắng</td><td>Có</td></tr>
+            <tr><td>Bảo hành</td><td>@Model.product.BAOHANH.ThoiGianBH</td></tr>
+        </table>
+    </div>
+
+    <!-- Mô tả chi tiết -->
+    <div class="product-description">
+        <h2>Mô tả chi tiết</h2>
+        <div class="description-box">
+            <div class="description-text">
+                <p>@Model.product.MoTa</p>
+            </div>
+            <div class="description-image">
+                @if (Model.product.LOAISANPHAM.MaNhom == "00001")
+                {
+                    <img src="https://res.cloudinary.com/duouljna1/image/upload/v1729510063/Resource/chon-size-mu-bao-hiem-1_ktkhxt.png" alt="HuongDanSize">
+                }
+                else
+                {
+                    <img src=" https://res.cloudinary.com/duouljna1/image/upload/v1729510274/Resource/size-giap-bao-ho_perwh8.jpg" alt="HuongDanSize">
+                }
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Đánh giá từ người dùng -->
+    <div class="user-reviews">
+        <div class="rating-header">
+            <div class="rating">
+                <span>@ViewBag.TongDanhGia</span>
+                <div class="stars">
+                    @for (int i = 0; i < @ViewBag.TongDanhGia; i++)
+                    {
+                        <i class="fas fa-star" style="color: #f57c00;"></i>
+                    }
+                </div>
+                @if (Model.comment.Count > 0)
+                {
+                    <span class="reviews">@Model.comment.Count đánh giá</span>
+                }
+                else
+                {
+                    <span class="reviews">Chưa có đánh giá nào</span>
+                }
+            </div>
+            <div class="rating-bar">
+                <div class="label">5</div>
+                <div class="bar">
+                    <div class="fill" style="width: @ViewBag.ThongKeDanhGia[4]%;"></div>
+                </div>
+                <b class="percentage"> @ViewBag.ThongKeDanhGia[4]%</b>
+            </div>
+            <div class="rating-bar">
+                <div class="label">4</div>
+                <div class="bar">
+                    <div class="fill" style="width: @ViewBag.ThongKeDanhGia[3]%;"></div>
+                </div>
+                <b class="percentage">@ViewBag.ThongKeDanhGia[3]%</b>
+            </div>
+            <div class="rating-bar">
+                <div class="label">3</div>
+                <div class="bar">
+                    <div class="fill" style="width: @ViewBag.ThongKeDanhGia[2]%;"></div>
+                </div>
+                <b class="percentage">@ViewBag.ThongKeDanhGia[2]%</b>
+            </div>
+            <div class="rating-bar">
+                <div class="label">2</div>
+                <div class="bar">
+                    <div class="fill" style="width: @ViewBag.ThongKeDanhGia[1]%;"></div>
+                </div>
+                <b class="percentage">@ViewBag.ThongKeDanhGia[1]%</b>
+            </div>
+            <div class="rating-bar">
+                <div class="label">1</div>
+                <div class="bar">
+                    <div class="fill" style="width: @ViewBag.ThongKeDanhGia[0]%;"></div>
+                </div>
+                <b class="percentage">@ViewBag.ThongKeDanhGia[0]%</b>
+            </div>
+        </div>
+        @if (Model.comment.Count > 0)
+        {
+            <h2>Đánh giá từ người dùng</h2>
+        }
+        @foreach (var item in Model.comment)
+        {
+            <div class="review">
+
+                <p><i class="fa-solid fa-circle-user"></i> <strong>@item.NGUOIDUNG.HoTen</strong> @item.ThoiGian</p>
+                <p>
+                    @for (int i = 0; i <= @item.SoSao; i++)
+                    {
+                        <span style="color: #ffd43b; font-size: 1.5vw;">&#9733;</span>
+                    }
+                </p>
+                <p>@item.NoiDung</p>
+            </div>
+        }
+
+        @using (Html.BeginForm("SubmitComment", "Product", new { MaSP = Model.product.MaSanPham, Url = Request.Url.ToString() }))
+        {
+            <div class="add-review">
+                <h3>Để lại đánh giá của bạn:</h3>
+                <div class="star-rating">
+                    <input type="hidden" name="SoSao" value="5">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <textarea rows="5" placeholder="Viết đánh giá của bạn ở đây..." name="comment" required></textarea>
+                <br>
+                @if (Session["IDUSER"] != null)
+                {
+                    <button class="submit-review" type="submit">Gửi đánh giá</button>
+                }
+                else
+                {
+                    <button class="submit-review" type="button" onclick="toastr.warning('Bạn chưa đăng nhập');">Gửi đánh giá</button>
+                }
+            </div>
+        }
+    </div>
+</div>
+<script src="~/Scripts/UserPage/Product/Detail.js"></script>

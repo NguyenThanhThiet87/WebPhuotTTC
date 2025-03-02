@@ -1,0 +1,65 @@
+﻿@model List<WebPhuotTTC.Models.SANPHAM>
+@{
+    ViewBag.Title = "Sanpham";
+    Layout = "~/Views/Shared/_AdminPage.cshtml";
+}
+
+<link href="~/Content/AdminPage/SanPham/SanPham.css" rel="stylesheet" />
+<h2>Sản Phẩm</h2>
+<div class="admin-sanpham-container">
+    <div>
+        <button id="btn-sanpham-create">
+            @Ajax.ActionLink("Tạo sản phẩm mới", "CreateSanpham", "Admin_SanPham", null, new AjaxOptions
+                 {
+                     HttpMethod = "GET",
+                     InsertionMode = InsertionMode.Replace,
+                     UpdateTargetId = "dialog"
+                 })
+        </button>
+        <p>Số Lượng: @Model.Count</p>
+    </div>
+    <div class="admin-sanpham-table">
+        <table>
+            <tr>
+                <th width="10%">Mã Sản Phẩm</th>
+                <th width="40%">Tên Sản Phẩm </th>
+                <th width="10%">Ảnh bìa</th>
+                <th width="20%">Giá bán</th>
+                <th width="20%">Chức Năng</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>#@item.MaSanPham</td>
+                    <td>@item.TenSanPham</td>
+                    <td>
+                        <img src="@Url.Content(item.AnhBia)" alt="@item.TenSanPham" style="width: 100px; height: auto;" />
+                    </td>
+                    <td>@String.Format("{0:N0}", @item.Gia).Replace(',','.')&#8363;</td>
+                    <td style="text-align:center;">
+                        <a href="@Url.Action("DetailSanPham", "Admin_SanPham", new { id=@item.MaSanPham})">Xem chi tiết</a>
+                        |
+                        @Ajax.ActionLink("Sửa", "EditSanpham", "Admin_SanPham", new { id = @item.MaSanPham }, new AjaxOptions
+                        {
+                          HttpMethod = "GET",
+                          InsertionMode = InsertionMode.Replace,
+                          UpdateTargetId = "dialog"
+                        })
+                        |
+                        @Ajax.ActionLink("Xóa", "DeleteSanpham", "Admin_SanPham", new { id = @item.MaSanPham }, new AjaxOptions
+                        {
+                         HttpMethod = "GET",
+                         InsertionMode = InsertionMode.Replace,
+                         UpdateTargetId = "dialog"
+                        })
+                    </td>
+                </tr>
+
+            }
+
+        </table>
+    </div>
+    <div id="dialog">
+        <!-- DISPLAY DIALOG-->
+    </div>
+</div>

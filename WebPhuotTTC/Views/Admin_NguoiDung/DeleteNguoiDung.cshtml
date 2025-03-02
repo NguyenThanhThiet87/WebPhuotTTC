@@ -1,0 +1,15 @@
+﻿@model WebPhuotTTC.Models.NGUOIDUNG
+<link href="../Content/AdminPage/NguoiDung/DeleteNguoiDung.css" rel="stylesheet" />
+<div class="admin-nguoidung-dialog_delete">
+    <div>
+        <i class="fa-solid fa-rectangle-xmark" style="color: black;" onclick="CloseDialog(event)"></i>
+        <h2>Xóa Người Dùng</h2>
+        <hr />
+        <p class="title">Bạn có chắc chắn muốn xóa</p>
+        <p><span>Họ tên:</span> @Model.HoTen , @Model.Email </p>
+        @using (Html.BeginForm("DeleteNguoiDung", "Admin_NguoiDung", FormMethod.Post, new {id=@Model.ID}))
+        {
+        <input id="submit" type="submit" value="Delete" />
+        }
+    </div>
+</div>

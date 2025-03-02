@@ -1,0 +1,55 @@
+﻿@model List<WebPhuotTTC.Models.NGUOIDUNG>
+@{
+    ViewBag.Title = "Nguoidung";
+    Layout = "~/Views/Shared/_AdminPage.cshtml";
+}
+
+<link href="~/Content/AdminPage/NguoiDung/NguoiDung.css" rel="stylesheet" />
+<h2>THÔNG TIN KHÁCH HÀNG</h2>
+<div class="admin-nguoidung-container">
+    <div class="admin-nguoidung-table">
+        <table>
+            <tr>
+                <th width="5%">ID</th>
+                <th width="20%">Họ tên</th>
+                <th width="10">Email</th>
+                <th width="10%">Số điện thoại</th>
+                <th width="30%">Địa chỉ</th>
+                <th width="5%">Vai Trò</th>
+                <th width="10%">Chức năng</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>#@item.ID</td>
+                    <td>@item.HoTen</td>
+                    <td>@item.Email</td>
+                    <td>@(item.SDT??"null")</td>
+                    <td>@(item.DiaChi??"null")</td>
+                    <td>@(item.VAITRO.TenVaiTro)</td>
+                    <td style="text-align:center;">
+                        @Ajax.ActionLink("Sửa", "EditNguoidung", "Admin_NguoiDung", new { id = @item.ID, maVT = item.MaVaiTro }, new AjaxOptions
+                   {
+                       HttpMethod = "GET",
+                       InsertionMode = InsertionMode.Replace,
+                       UpdateTargetId = "dialog"
+                   })
+                        |
+                        @Ajax.ActionLink("Xóa", "DeleteNguoidung", "Admin_NguoiDung", new { id = @item.ID }, new AjaxOptions
+                 {
+                     HttpMethod = "GET",
+                     InsertionMode = InsertionMode.Replace,
+                     UpdateTargetId = "dialog"
+                 })
+                    </td>
+                </tr>
+
+            }
+
+        </table>
+    </div>
+    <div id="dialog">
+        <!-- DISPLAY DIALOG-->
+    </div>
+</div>
+<script src="~/Scripts/AdminPage/Nguoidung.js"></script>

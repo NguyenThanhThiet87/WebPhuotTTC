@@ -1,0 +1,44 @@
+﻿<link href="~/Content/UserPage/Product/ProductBannerPartialView.css" rel="stylesheet" />
+@model List<WebPhuotTTC.Models.ProductThumnail>
+<div class="product">
+    <img src="https://res.cloudinary.com/duouljna1/image/upload/v1729605914/Banner/banner-ban-si-non-bao-hiem-hcm_std7jd.jpg" alt="img" />
+    <div class="product_banner swiper mySwiper">
+        <div class="swiper-wrapper">
+            @foreach (var item in Model)
+            {
+                <div class="product-item swiper-slide">
+                    <a href="@Url.Action("Detail", "Product", new { MaSP=@item.product.MaSanPham})" style="text-decoration:none">
+                        <div class="product-card">
+                            @{
+                                if (item.discount != null)
+                                {
+                                    <div class="discount">Giảm @item.discount.TiLeGiamGia%</div>
+                                }
+                            }
+                            <img src="@Url.Content(item.product.AnhBia)" alt="helmet image">
+                            <div class="product-info">
+                                <h1 class="product-name">@item.product.TenSanPham</h1>
+                                <div class="price-container">
+                                    <p class="product-price">@String.Format("{0:N0}", item.product.Gia - (item.discount != null ? ((item.product.Gia / 100) * item.discount.TiLeGiamGia) : 0)).Replace(',', '.')&#8363;</p>
+                                    <p class="product-discount-price">@String.Format("{0:N0}", item.product.Gia).Replace(',', '.')&#8363; </p>
+                                </div>
+                                <ul class="evaluate">
+                                    @for (int i = 1; i <= @item.SaoTB; i++)
+                                    {
+                                        <li>
+                                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
+<script src="~/Scripts/UserPage/Home/ProductThumbnail.js"></script>

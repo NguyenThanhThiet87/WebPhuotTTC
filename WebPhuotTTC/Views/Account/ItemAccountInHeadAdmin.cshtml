@@ -1,0 +1,13 @@
+﻿@model WebPhuotTTC.Models.NGUOIDUNG
+<div class="admin_header-nav-account dropdown">
+    <i class="fa-solid fa-circle-user" style="color: #ffffff;"></i>
+    <span class="admin-name dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Admin: @Model.HoTen</span>
+    <ul class="dropdown-menu">
+        <li>
+            <a class="dropdown-item" href="@Url.Action("LogOut","Account")">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Đăng Xuất
+            </a>
+        </li>
+    </ul>
+</div>

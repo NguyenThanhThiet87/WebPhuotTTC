@@ -1,0 +1,53 @@
+﻿@model List<WebPhuotTTC.Models.DonHangDetail>
+@{
+    ViewBag.Title = "DonHangDaDat";
+    Layout = "~/Views/Shared/_UserPage.cshtml";
+}
+<link href="~/Content/UserPage/Cart/DonHangDaDat.css" rel="stylesheet" />
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index","User")">Home</a></li>
+        <li class="breadcrumb-item" onclick="history.back()">Quay lại</li>
+        <li class="breadcrumb-item active" aria-current="page">Đơn đặt hàng</li>
+    </ol>
+</nav>
+<div class="tabs">
+    <div class="tab active" onclick="changeActive(this, @Model)">
+        Tất cả
+    </div>
+    <div class="tab" onclick="changeActive(this, @Model)">
+        Chờ thanh toán
+    </div>
+    <div class="tab" onclick="changeActive(this, @Model)">
+        Vận chuyển
+    </div>
+    <div class="tab" onclick="changeActive(this, @Model)">
+        Chờ giao hàng
+    </div>
+    <div class="tab" onclick="changeActive(this, @Model)">
+        Hoàn thành
+    </div>
+    <div class="tab" onclick="changeActive(this, @Model)">
+        Đã hủy
+    </div>
+    <div class="tab" onclick="changeActive(this)">
+        Trả hàng/Hoàn tiền
+    </div>
+</div>
+<div class="search-bar">
+    <input placeholder="Bạn có thể tìm kiếm theo tên Shop, ID đơn hàng hoặc Tên Sản phẩm" type="text" />
+</div>
+@if (Model!=null && Model.Count > 0)
+{
+    <div class="donhangdadat-container">
+        @Html.Action("ListDonHang", "Cart", new { sort= "Tất cả", listSP=Model})
+    </div>
+}
+else
+{
+<div style="margin:auto;">
+    <lottie-player src="https://lottie.host/692c7663-41d3-4d98-bfb7-ac9c1d42dbfa/YXJE0Z3e43.json" background="##fff" speed="1" style="width: 300px; height: 300px; margin:auto;" loop autoplay direction="1" mode="normal"></lottie-player>
+    <p style="text-align:center; font-weight:600;">Bạn chưa có đơn hàng nào</p>
+</div>
+}    
+<script src="~/Scripts/UserPage/Cart/DonHang.js"></script>

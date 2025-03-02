@@ -1,0 +1,52 @@
+﻿@model List<WebPhuotTTC.Models.GIAMGIA_SANPHAM>
+@{
+    ViewBag.Title = "DetailVourcher";
+    Layout = "~/Views/Shared/_AdminPage.cshtml";
+}
+<link href="~/Content/AdminPage/Vourcher/DetailVourcher.css" rel="stylesheet" />
+<div class="admin-vourcher-detail-container">
+    <h2><strong>CHI TIẾT VOURCHER:</strong> @Model[0].GIAMGIA.NoiDungGiamGia</h2>
+    <strong>Giảm @Model[0].GIAMGIA.TiLeGiamGia% bắt đầu từ @Model[0].GIAMGIA.ThoiGianBatDau tới @Model[0].GIAMGIA.ThoiGianKetThuc</strong>
+    <div class="admin-vourcher-detail-table">
+        <h4>Các sản phẩm áp dụng giảm giá</h4>
+        <table>
+            <tr>
+                <th width="5%">STT</th>
+                <th width="25%">Tên Sản Phẩm</th>
+                <th width="10%">Ảnh</th>
+                <th width="15%">Giá gốc</th>
+                <th width="15%">Giá sau giảm</th>
+                <th width="15%">Loại sản phẩm</th>
+                <th width="15%">Thương Hiệu</th>
+            </tr>
+           
+            @{ int count = 0;}
+            @foreach (var item in Model)
+            {
+                if (item.SANPHAM != null && item.MaSanPham != null)
+                {
+                    count++;
+                    <tr>
+                        <td>@count</td>
+                        <td>@item.SANPHAM.TenSanPham</td>
+                        <td><img src="@item.SANPHAM.AnhBia" alt="img"/></td>
+                        <td>@string.Format("{0:N0}", @item.SANPHAM.Gia).Replace(',','.') &#8363;</td>
+                        <td>@string.Format("{0:N0}",(item.SANPHAM.Gia - (item.SANPHAM.Gia / 100 * Model[0].GIAMGIA.TiLeGiamGia))).Replace(',','.') &#8363;</td>
+                        <td style="text-align:center;"> @item.SANPHAM.LOAISANPHAM.TenLoai</td>
+                        <td style="text-align:center;"> @item.SANPHAM.THUONGHIEU.TenThuongHieu</td>
+                    </tr>
+                }
+            }
+        </table>
+
+    </div>
+    @Html.ActionLink("Quay Lại","Vourcher","Admin")
+</div>
+
+
+
+
+
+
+
+

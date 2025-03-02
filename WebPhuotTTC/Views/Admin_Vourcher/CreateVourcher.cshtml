@@ -1,0 +1,50 @@
+﻿@model WebPhuotTTC.Models.GIAMGIA
+<link href="~/Content/AdminPage/Vourcher/CreateVourcher.css" rel="stylesheet" />
+<div class="admin-vourcher-dialog_create">
+    <div>
+        <i class="fa-solid fa-rectangle-xmark" style="color: black;" onclick="CloseDialog(event)"></i>
+        <h2>Tạo giảm giá mới</h2>
+        @using (Html.BeginForm("CreateVourcher", "Admin_Vourcher", FormMethod.Post))
+        {
+            <fieldset>
+                <br />
+                <br />
+                <label for="name">Mô tả giảm giá</label>
+                <input id="name" type="text" required name="MoTaGiamGia" value="" placeholder="Nhập mô tả giảm giá" />
+                <br />
+                <br />
+                <label for="name">Tỉ lệ giảm giá</label>
+                <input id="name" type="number" required name="TiLeGiamGia" value="" placeholder="Nhập tỉ lệ giảm giá" />
+                <br />
+                <br />
+                <label for="name">Thời gian bắt đầu</label>
+                <input id="name" type="date" required name="ThoiGianBatDau" value="" placeholder="Thời gian bắt đầu" />
+                <br />
+                <br />
+                <label for="name">Thời gian kết thúc</label>
+                <input id="name" type="date" required name="ThoiGianKetThuc" value="" placeholder="Thời gian kết thúc" />
+                <br />
+                <br />
+                <div class="dieukienapma-vourcher">
+                    <h2>Điều kiện áp dụng</h2>
+                        <h6>Loại Sản Phẩm</h6>
+                    <select name="loaisp" required multiple>
+                        @foreach (var item in ViewBag.LoaiSP)
+                        {
+                            <option value="@item.MaLoai">@item.TenLoai</option>
+                        }
+                    </select>
+                        <h6>Thương Hiệu</h6>
+                    <select name="ThuongHieu" required multiple>
+                        @foreach (var item in ViewBag.ThuongHieu)
+                        {
+                            <option value="@item.MaThuongHieu">@item.TenThuongHieu</option>
+                        }
+                    </select>
+                        
+                </div>
+                <input id="submit" type="submit" value="TẠO MỚI" />
+            </fieldset>
+        }
+    </div>
+</div>

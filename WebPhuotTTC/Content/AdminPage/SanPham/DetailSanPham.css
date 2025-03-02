@@ -1,0 +1,42 @@
+﻿.admin-sanpham-detail-container{
+    height:90vh;
+    overflow-y:scroll;
+}
+.images{
+    display:flex;
+    column-gap:10px;
+}
+.images >img{
+    width:100px;
+}
+.admin-sanpham-detail {
+    padding: 20px;
+}
+
+   .admin-sanpham-detail > table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+        .admin-sanpham-detail > table tr {
+            border: 1px solid #ccc;
+            height: 50px;
+        }
+
+            .admin-sanpham-detail > table tr:hover {
+                background-color: #ddd;
+            }
+
+            .admin-sanpham-detail > table tr td, .admin-sanpham-detail > table tr th {
+                border: 1px solid #ccc;
+                text-align: left;
+                padding: 10px;
+            }
+            
+            .admin-sanpham-detail > table tr th{
+                background-color:gray;
+                color:white;
+            }
+            .admin-sanpham-detail > table tr td a{
+                
+                color:black;
+            }

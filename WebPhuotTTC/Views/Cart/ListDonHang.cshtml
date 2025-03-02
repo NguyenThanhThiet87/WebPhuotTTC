@@ -1,0 +1,57 @@
+﻿@model List<WebPhuotTTC.Models.DonHangDetail>
+@{
+    ViewBag.Title = "ListDonHang";
+}
+
+@foreach (var item in Model)
+{
+    double tongtien = 0;
+    int sum = 0;
+    <div class="order-container">
+        <div class="order-header">
+            <div class="order-id">
+                Mã đơn hàng: @item.donhang.MaDonHang
+            </div>
+            <div class="order-date">
+                <strong>Ngày lập :</strong> @item.donhang.NgayLap
+            </div>
+        </div>
+        @foreach (var sp in @item.chitietdonhang)
+        {
+            <div class="order-item">
+                <img alt="Image of a black and orange full face helmet" height="100" src="@sp.QLSANPHAM.SANPHAM.AnhBia" width="100" />
+                <div class="order-item-details">
+                    <div class="item-name">
+                        @sp.QLSANPHAM.SANPHAM.TenSanPham
+                    </div>
+                    <div class="item-variant">
+                        @sp.QLSANPHAM.MAUSAC.TenMau
+                    </div>
+                    <div class="item-quantity">
+                        x @sp.SoLuong
+                    </div>
+                    <div class="item-price">
+                        <span class="item-original-price">
+                            @String.Format("{0:N0}", sp.QLSANPHAM.SANPHAM.Gia).Replace(',', '.')&#8363;
+                        </span>
+                        <span class="item-price">
+                            @String.Format("{0:N0}", (sp.DonGia / sp.SoLuong)).Replace(',', '.')&#8363;
+                        </span>
+                    </div>
+                </div>
+            </div>
+            sum++;
+            tongtien += sp.DonGia;
+        }
+        <div class="order-summary">
+            Tổng số tiền (@sum sản phẩm):
+            <span class="total-price">
+                @String.Format("{0:N0}", (@tongtien)).Replace(',', '.')&#8363;
+            </span>
+        </div>
+        <div class="order-status">
+            Trạng thái: @item.donhang.TRANGTHAI.TenTrangThai
+        </div>
+    </div>
+}
+

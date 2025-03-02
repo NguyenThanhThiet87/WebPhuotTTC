@@ -1,0 +1,63 @@
+﻿@model List<WebPhuotTTC.Models.GIAMGIA>
+@{
+    ViewBag.Title = "Vourcher";
+    Layout = "~/Views/Shared/_AdminPage.cshtml";
+}
+
+<link href="~/Content/AdminPage/Vourcher/Vourcher.css" rel="stylesheet" />
+<h2>CHƯƠNG TRÌNH KHUYẾN MÃI</h2>
+<div class="admin-vourcher-container">
+    <div>
+        <button id="btn-vourcher-create">
+            @Ajax.ActionLink("Tạo khuyến mãi mới", "CreateVourcher", "Admin_Vourcher", new AjaxOptions
+                 {
+                     HttpMethod = "GET",
+                     InsertionMode = InsertionMode.Replace,
+                     UpdateTargetId = "dialog"
+                 })
+        </button>
+        <p>Số Lượng: @Model.Count</p>
+    </div>
+    <div class="admin-vourcher-table">
+        <table>
+            <tr>
+                <th width="10%">STT</th>
+                <th width="45%">Nội dung khuyến mãi </th>
+                <th width="20%">Tỉ lệ giảm giá</th>
+                <th width="30%">Chức Năng</th>
+            </tr>
+            @{ int count = 0;}
+            @foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count</td>
+                    <td>@item.NoiDungGiamGia</td>
+                    <td>@item.TiLeGiamGia%</td>
+                    <td style="text-align:center;">
+                       <a href="@Url.Action("DetailVourcher", "Admin_Vourcher", new { id=@item.MaGiamGia})">Xem chi tiết</a>
+                        |
+                       @Ajax.ActionLink("Sửa", "EditVourcher", "Admin_Vourcher", new { id = @item.MaGiamGia }, new AjaxOptions
+                        {
+                            HttpMethod = "GET",
+                            InsertionMode = InsertionMode.Replace,
+                            UpdateTargetId = "dialog"
+                        })
+                        |
+                        @Ajax.ActionLink("Xóa", "DeleteVourcher", "Admin_Vourcher", new { id = @item.MaGiamGia }, new AjaxOptions
+                        {
+                            HttpMethod = "GET",
+                            InsertionMode = InsertionMode.Replace,
+                            UpdateTargetId = "dialog"
+                        })
+                    </td>
+                </tr>
+
+            }
+
+        </table>
+    </div>
+    <div id="dialog">
+        <!-- DISPLAY DIALOG-->
+    </div>
+</div>

@@ -1,0 +1,128 @@
+﻿.admin-sanpham-dialog_create {
+    z-index: 2;
+    top: 55%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    background-color: #00a6e6;
+    border-radius: 10px;
+    position: fixed;
+    min-width: 750px;
+    min-height: 265px;
+    border: 1px solid gray;
+}
+
+    .admin-sanpham-dialog_create > div {
+        position: relative;
+    }
+
+        .admin-sanpham-dialog_create > div > h2 {
+            text-align: center;
+            padding: 10px;
+        }
+
+    .admin-sanpham-dialog_create .fa-rectangle-xmark {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        font-size: 30px;
+    }
+
+        .admin-sanpham-dialog_create .fa-rectangle-xmark:hover {
+            transform: scale(1.1);
+        }
+
+    .admin-sanpham-dialog_create .container {
+        margin: 0px;
+        padding: 10px; /* Added padding on the sides */
+        background-color: #00AEEF;
+        border-radius: 5px;
+        max-height: 70vh;
+        overflow-y: scroll;
+    }
+
+        .admin-sanpham-dialog_create .container .img {
+            display: flex;
+        }
+
+        .admin-sanpham-dialog_create .container .version-btn {
+            float: right;
+            margin-right: 20px;
+            margin-top:10px;
+        }
+
+            .admin-sanpham-dialog_create .container .version-btn > button {
+                padding: 5px 10px;
+                border-radius: 5px;
+                background: gray;
+                color: white;
+            }
+
+        .admin-sanpham-dialog_create .container label {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+        }
+
+        .admin-sanpham-dialog_create .container input[type="text"],
+        .admin-sanpham-dialog_create .container textarea,
+        .admin-sanpham-dialog_create .container select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .admin-sanpham-dialog_create .container textarea {
+            height: 100px;
+        }
+
+        .admin-sanpham-dialog_create .container .row {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            margin-left: 0px;
+        }
+
+            .admin-sanpham-dialog_create .container .row select,
+            .admin-sanpham-dialog_create .container .row input[type="text"] {
+                width: 20%;
+                margin-right: 20px;
+            }
+
+            .admin-sanpham-dialog_create .container .row button {
+                width: fit-content;
+                padding: 10px 20px;
+                background-color: #fff;
+                border: 1px solid #000;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+
+                .admin-sanpham-dialog_create .container .row button:hover {
+                    background-color: #ccc;
+                }
+
+        .admin-sanpham-dialog_create .container .submit-btn {
+            width: fit-content;
+            padding: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            border: none;
+            background-color: blue;
+            padding: 10px 20px;
+            border-radius: 13px;
+        }
+
+            .admin-sanpham-dialog_create .container .submit-btn:hover {
+                background-color: #ccc;
+            }
+
+    .admin-sanpham-dialog_create .version-container {
+        margin-top: 20px;
+    }

@@ -1,0 +1,54 @@
+﻿@model WebPhuotTTC.Models.DONHANG
+<link href="~/Content/AdminPage/DonHang/EditDonHang.css" rel="stylesheet" />
+<div class="admin-donhang-dialog_edit">
+    <div>
+        <i class="fa-solid fa-rectangle-xmark" style="color: black;" onclick="CloseDialog(event)"></i>
+        <h2>Edit</h2>
+        @using (Html.BeginForm("Edit", "Admin_DonHang", FormMethod.Post))
+        {
+            <fieldset>
+               @Html.Hidden("MaDonHang",@Model.MaDonHang)
+                <br />
+                <table>
+                   
+                    <tr>
+                        <th>Mã Đơn Hàng</th>
+                        <td>#@Model.MaDonHang</td>
+                    </tr>
+                    <tr>
+                        <th> Ngày Đặt Hàng </th>
+                        <td>@Model.NgayLap</td>
+                    </tr>
+                    <tr>
+                        <th>Tên Khách Hàng</th>
+                        <td> @Model.NGUOIDUNG.HoTen</td>
+                    </tr>
+                    <tr>
+                        <th>Địa Chỉ Giao Hàng</th>
+                        <td>@Model.NGUOIDUNG.DiaChi</td>
+                    </tr>
+                    <tr>
+                        <th>Tổng Tiền </th>
+                        <td>@String.Format("{0:N0}", @Model.TongTien).Replace(',', '.')&#8363;</td>
+                    </tr>
+                </table>
+                <label for="MaTrangThai">Trạng Thái</label>
+                <select name="MaTrangThai">
+                    @foreach (var item in ViewBag.TrangThai)
+                    {
+                        if (item.MaTrangThai == Model.MaTrangThai)
+                        {
+                            <option selected value="@item.MaTrangThai">@item.TenTrangThai</option>
+                        }
+                        else
+                        {
+                            <option value="@item.MaTrangThai">@item.TenTrangThai</option>
+                        }
+                    }
+                </select>
+                <input id="submit" type="submit" value="LƯU" />
+            </fieldset>
+        }
+    </div>
+</div>
+

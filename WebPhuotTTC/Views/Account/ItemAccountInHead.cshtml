@@ -1,0 +1,37 @@
+﻿@model WebPhuotTTC.Models.NGUOIDUNG
+<link href="~/Content/UserPage/ItemAccountInHeadPartialView.css" rel="stylesheet" />
+@if (Model != null)
+{
+    <div class="login-ed dropdown">
+        <i class="fas fa-user" style="font-size:20px;"></i>
+        <span class="UserName dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">@Model.HoTen</span>
+        <ul class="dropdown-menu">
+            <li>
+                <a class="dropdown-item" href="@Url.Action("PersonalInfomation", "Account")">
+                    <i class="fa-regular fa-address-card"></i>
+                    Thông tin cá nhân
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="@Url.Action("DonHangDaDat", "Cart")">
+                    <i class="fa-solid fa-receipt"></i>
+                    Đơn đã đặt
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="@Url.Action("LogOut","Account")">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Đăng Xuất
+                </a>
+            </li>
+        </ul>
+    </div>
+}
+else
+{
+    <div class="login" onclick="DisplaySignIn()">
+        <i class="fas fa-user" style="font-size:20px;"></i>
+        <span>Đăng nhập</span>
+    </div>
+}
+

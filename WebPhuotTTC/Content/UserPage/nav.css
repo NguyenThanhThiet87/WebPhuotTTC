@@ -1,0 +1,44 @@
+﻿body > nav {
+    background-color: #00a6e6;
+}
+
+   body > nav > ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-evenly;
+        margin: 0px;
+        padding: 5px;
+        align-items: center;
+    }
+
+      body >  nav > ul > li {
+            color: black;
+            font-size: 15px;
+            border-radius: 10px;
+            background-color: #00a6e6;
+            position: relative;
+            padding:5px 10px;
+        }
+
+       body > nav > ul li div {
+            height: 20px;
+        }
+
+       body > nav > ul > li:hover {
+            background-color: white;
+        }
+
+       body > nav > ul li i {
+            margin-left: 5px;
+        }
+      body >  nav > ul li a {
+            color:black;
+            text-decoration:none;
+            font-size:17px;
+        }
+
+.frameDropList {
+    position: absolute;
+    z-index: 2;
+}
+/**/

@@ -1,0 +1,59 @@
+﻿.admin-thuonghieu-dialog_create {
+    z-index: 2;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    background-color: #00a6e6;
+    border-radius: 10px;
+    position: fixed;
+    min-width:470px;
+    min-height:265px;
+}
+.admin-thuonghieu-dialog_create >div{
+    position:relative;
+    padding:20px;
+}
+.admin-thuonghieu-dialog_create .fa-rectangle-xmark{
+    position:absolute;
+    top:-20px;
+    right:-20px;
+    font-size:30px;
+}
+.admin-thuonghieu-dialog_create .fa-rectangle-xmark:hover{
+    transform:scale(1.1);
+}
+.admin-thuonghieu-dialog_create h2{
+    margin-bottom:15px;
+}
+.admin-thuonghieu-dialog_create fieldset{
+    padding:20px 20px 10px 20px;
+    border:2px solid white;
+}
+.admin-thuonghieu-dialog_create label{
+    color:white;
+}
+.admin-thuonghieu-dialog_create input{
+    padding:0px 10px;
+    border-radius:5px;
+}
+.admin-thuonghieu-dialog_create input#type{
+    width:150px;
+    height:30px;
+}
+.admin-thuonghieu-dialog_create input#name{
+    width:300px;
+    height:30px;
+}
+.admin-thuonghieu-dialog_create input#submit{
+    padding:10px 20px;
+    border-radius:10px;
+    border:none;
+    margin-left:50%;
+    transform:translateX(-50%);
+    margin-top:10px;
+    background-color:blue;
+    color:white;
+}
+.admin-thuonghieu-dialog_create input#submit:hover{
+    background:gray;
+}

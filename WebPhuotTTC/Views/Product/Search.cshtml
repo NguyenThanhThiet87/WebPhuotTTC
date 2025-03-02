@@ -1,0 +1,28 @@
+﻿@model List<WebPhuotTTC.Models.SANPHAM>
+<link href="~/Content/UserPage/Product/Search.css" rel="stylesheet" />
+<div id="search-container" class="search-result-container">
+    @if (Model != null && Model.Count > 0)
+    {
+        <h2>Kết quả tìm kiếm</h2>
+        foreach (var item in Model)
+        {
+            <a href="@Url.Action("Detail", "Product", new { maSP=item.MaSanPham})">
+                <div class="product-item">
+                    <img alt="anhbia" height="60" src="@item.AnhBia" width="60" />
+                    <div class="product-info">
+                        <p class="product-name">
+                            @item.TenSanPham
+                        </p>
+                        <p class="product-price">
+                            @String.Format("{0:N0}", @item.Gia).Replace(',','.')&#8363;
+                        </p>
+                    </div>
+                </div>
+            </a>
+        }
+    }
+    else
+    {
+        <h2>Không tìm thấy kết quả </h2>
+    }
+</div>

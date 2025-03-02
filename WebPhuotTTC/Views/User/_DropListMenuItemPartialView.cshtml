@@ -1,0 +1,15 @@
+﻿<link href="../Content/UserPage/DropListMenuItemPartialView.css" rel="stylesheet" />
+@model IEnumerable<WebPhuotTTC.Models.LOAISANPHAM>
+<ul class="DropListMenu">
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="@Url.Action("ProductByCategory", "Product", new { MaLoai =item.MaLoai,sort=" "})">
+                <div>
+                    @item.TenLoai
+                <i class="fa-solid fa-caret-right"></i>
+            </div>
+        </a>
+      </li>
+    }
+</ul>

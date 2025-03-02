@@ -1,0 +1,33 @@
+﻿@model WebPhuotTTC.Models.Loai_NhomSP
+<link href="../Content/AdminPage/LoaiSP/EditLoaiSP.css" rel="stylesheet" />
+<div class="admin-loaisanpham-dialog_edit">
+    <div>
+        <i class="fa-solid fa-rectangle-xmark" style="color: black;" onclick="CloseDialog(event)"></i>
+        <h2>Edit</h2>
+        @using (Html.BeginForm("EditLoaisanpham", "Admin_LoaiSP", FormMethod.Post, new { id = Model.loaisp.MaLoai }))
+        {
+            <fieldset>
+                <br />
+                <label for="name">Tên Loai</label>
+                <input id="name" type="text" required name="name" value="@Model.loaisp.TenLoai" />
+                <br />
+                <br />
+                <label for="MaNhom">Thuộc nhóm </label>
+                <select name="MaNhom">
+                    @foreach (var item in Model.nhomsp)
+                    {
+                        if (item.MaNhom == Model.loaisp.MaNhom)
+                        {
+                            <option selected value="@item.MaNhom">@item.TenNhom</option>
+                        }
+                        else
+                        {
+                            <option value="@item.MaNhom">@item.TenNhom</option>
+                        }
+                    }
+                </select>
+                <input id="submit" type="submit" value="LƯU" />
+            </fieldset>
+        }
+    </div>
+</div>

@@ -1,0 +1,17 @@
+﻿.doanhthu-container{
+    display:flex;
+    justify-content:space-between;
+    padding:0px 30px;
+}
+h3{
+    text-align:center;
+    margin-top:10px;
+}
+.thongke_SP,.thongke_donHang 
+{
+    width:fit-content;
+}
+.thongke_SP > canvas,.thongke_donHang > canvas {
+    width: 500px !important;
+    height: 500px !important;
+}

@@ -1,0 +1,80 @@
+﻿@model WebPhuotTTC.Models.DonHangDetail
+@{
+    ViewBag.Title = "DetailDonHang";
+    Layout = "~/Views/Shared/_AdminPage.cshtml";
+}
+<link href="~/Content/AdminPage/DonHang/DetailDonHang.css" rel="stylesheet" />
+<div class="admin-donhang-detail-container">
+    <h2>
+        Chi Tiết Đơn Hàng
+    </h2>
+    <div class="order-details">
+        <h3>
+            Thông Tin Đơn Hàng
+        </h3>
+        <table>
+            <tr>
+                <th>Mã Đơn Hàng</th>
+                <td>#@Model.donhang.MaDonHang</td>
+            </tr>
+            <tr>
+                <th> Ngày Đặt Hàng </th>
+                <td>@Model.donhang.NgayLap</td>
+            </tr>
+            <tr>
+                <th>Tên Khách Hàng</th>
+                <td> @Model.donhang.NGUOIDUNG.HoTen</td>
+            </tr>
+            <tr>
+                <th>Địa Chỉ Giao Hàng</th>
+                <td>@Model.donhang.NGUOIDUNG.DiaChi</td>
+            </tr>
+            <tr>
+                <th>Tổng Tiền </th>
+                <td>@String.Format("{0:N0}", @Model.donhang.TongTien).Replace(',', '.')&#8363;</td>
+            </tr>
+        </table>
+    </div>
+    <div class="admin-donhang-detail-chitietdon-container">
+        <h3>Thông Tin Sản Phẩm</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã Sản Phẩm </th>
+                    <th> Tên Sản Phẩm </th>
+                    <th>Số Lượng</th>
+                    <th>Giá</th>
+                    <th>Thành Tiền</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.chitietdonhang)
+                {
+                    <tr>
+                        <td>
+                            #@item.MaSanPham
+                        </td>
+                        <td>
+                            @item.QLSANPHAM.SANPHAM.TenSanPham
+                        </td>
+                        <td>
+                            @item.SoLuong
+                        </td>
+                        <td>
+                            @String.Format("{0:N0}", item.DonGia / @item.SoLuong).Replace(',','.')&#8363;
+                        </td>
+                        <td>
+                            @String.Format("{0:N0}", item.DonGia).Replace(',', '.')&#8363;
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+    <div class="back-button">
+        <button onclick="window.history.back();">
+            Quay lại
+        </button>
+    </div>
+</div>

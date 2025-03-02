@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminPage.cshtml";
+}
+<link href="~/Content/AdminPage/TrangChu/TrangChu.css" rel="stylesheet"/>
+<h2>Bảng Thống kê doanh thu</h2>
+<div class="doanhthu-container">
+    <div class="thongke_SP">
+        <canvas id="myChart" width="300" height="300"></canvas>
+    </div>
+    <div class="thongke_donHang">
+        <canvas id="chartDH" width="300" height="300"></canvas>
+    </div>
+</div>
+<h3>Tổng tiền: @String.Format("{0:N0}", 3000000).Replace(',', '.')&#8363;</h3>
+<script src="~/Scripts/AdminPage/Home.js"> 
+</script>

@@ -1,0 +1,154 @@
+﻿.donhangdadat-container
+{
+    display:flex;
+    flex-direction:column;
+    width:60vw;
+    margin-left:auto;
+    margin-right:auto;
+    padding:30px 20px;
+    overflow-y:scroll;
+    row-gap:20px;
+    height:85vh;
+    margin-bottom:10px;
+}
+.order-container {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 30px;
+    min-height:300px;
+    border-radius: 20px;
+}
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #f5f5f5;
+    padding-bottom: 10px;
+}
+
+.tab {
+    font-size: 16px;
+    color: #666;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+    .tab.active {
+        color: #ff5722;
+        border-bottom: 2px solid #ff5722;
+    }
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+    .search-bar input {
+        width: 50%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:10px;
+}
+
+
+    .order-header div {
+        font-size: 14px;
+    }
+
+
+    .order-header .order-id {
+        font-weight: bold;
+    }
+
+
+.order-item {
+    display: flex;
+    align-items: center;
+    background-color:#fbfaf9;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom:10px;
+}
+
+
+    .order-item img {
+        width: 100px;
+        height: 100px;
+        margin-right: 15px;
+    }
+
+
+.order-item-details {
+    flex-grow: 1;
+}
+
+
+    .order-item-details .item-name {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+
+    .order-item-details .item-variant {
+        font-size: 14px;
+        color: #555;
+    }
+
+
+    .order-item-details .item-quantity {
+        font-size: 14px;
+        text-align: right;
+    }
+
+
+    .order-item-details .item-price {
+        font-size: 16px;
+        color: red;
+        text-align: right;
+        font-weight:600;
+    }
+
+
+    .order-item-details .item-original-price {
+        font-size: 14px;
+        color: #999;
+        text-decoration: line-through;
+        text-align: right;
+    }
+
+
+.view-more {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+.order-summary {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+s
+
+    .order-summary .total-price {
+        color: red;
+        font-weight: bold;
+    }
+
+
+.order-status {
+    font-size: 16px;
+    color: green;
+    font-weight: bold;
+    text-align: right;
+}

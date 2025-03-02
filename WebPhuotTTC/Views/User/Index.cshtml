@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_UserPage.cshtml";
+        if (TempData["ThongBao"] != null)
+        {
+            <script>
+                toastr["success"](TempData["ThongBao"])
+            </script>
+        }
+}
+<link href="~/Content/UserPage/Home.css" rel="stylesheet" />
+<div class="home-container">
+    <div class="home-banner">
+        <div class="banner-top">
+            <div class="banner-top-left">
+                <img src="https://res.cloudinary.com/duouljna1/image/upload/v1728057554/Banner/web_22-9-03_smcdq4.jpg" alt="img" />
+                <img src="https://res.cloudinary.com/duouljna1/image/upload/v1728057988/Banner/ls2vn-banner-2-1024x449_fms7gz.jpg" alt="img" />
+            </div>
+            <div class="banner-top-center">
+                <video src="https://res.cloudinary.com/duouljna1/video/upload/v1728200939/Video/GM_KING_FIGHTER_-_GRAFIK_GORILLA_1_w1fphv.mp4" loop autoplay muted></video>
+            </div>
+            <div class="banner-top-right">
+                <img src="https://res.cloudinary.com/duouljna1/image/upload/v1728058060/Banner/web_22-9-05_sdnfwb.jpg" alt="img" />
+                <img src="https://res.cloudinary.com/duouljna1/image/upload/v1728058061/Banner/web_22-9-02_uucatz.jpg" alt="img" />
+            </div>
+        </div>
+
+        <div id="banner-bottom" class="banner-bottom carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://res.cloudinary.com/duouljna1/image/upload/v1729606047/Banner/ls2vn-banner-2-1024x449_fms7gz.jpg" alt="img" />
+                </div>
+                <div class="carousel-item">
+                    <img src="https://res.cloudinary.com/duouljna1/image/upload/v1728199548/Banner/banner-fullface-2-kinh-e1637392774771_mzfjyu.jpg" class="d-block w-100" alt="img" />
+                </div>
+                <div class="carousel-item">
+                    <img src="https://res.cloudinary.com/duouljna1/image/upload/v1729515885/Banner/banner_1920x608-1024x324_mih8zw.png" class="d-block w-100" alt="img" />
+                </div>
+            </div>
+            <i id="banner-bottom-next" class="fa-solid fa-circle-right carousel-control-next" style="color: #ffffff;" data-bs-target="#banner-bottom" data-bs-slide="next"></i>
+            <i id="banner-bottom-pre" class="fa-solid fa-circle-left carousel-control-prev" style="color: #ffffff;" data-bs-target="#banner-bottom" data-bs-slide="prev"></i>
+        </div>
+
+       @Html.Action("ProductAdvanced","Product");
+
+    </div>
+    @Html.Action("ProductBanner", "Product", new { maSP="00003"})
+
+    @Html.Action("ProductBanner", "Product", new { maSP = "00001" })
+</div>
+<script src="~/Scripts/UserPage/Home/Home.js"></script>

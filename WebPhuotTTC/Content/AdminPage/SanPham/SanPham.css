@@ -1,0 +1,66 @@
+﻿.admin-sanpham-container {
+    width: 100%;
+    border: 1px solid gray;
+    margin: 20px auto 0px auto;
+}
+
+    .admin-sanpham-container > div:first-child {
+        padding: 10px 30px;
+        border: 1px solid gray;
+    }
+
+        .admin-sanpham-container > div:first-child button {
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: white;
+            background-color: #17abec;
+            border: none;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .admin-sanpham-container > div:first-child button:hover {
+          background-color: #005efb;
+            
+        }
+        .admin-sanpham-container > div:first-child button a{
+            text-decoration:none;
+                color: white;
+        }
+        .admin-sanpham-container > div:first-child p {
+            font-size: 18px;
+            margin-left: 10px;
+        }
+
+.admin-sanpham-table {
+    padding: 20px;
+    max-height:60vh;
+    overflow-y:scroll;
+}
+
+    .admin-sanpham-table > table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+        .admin-sanpham-table > table tr {
+            border: 1px solid #ccc;
+            height: 50px;
+        }
+
+            .admin-sanpham-table > table tr:hover {
+                background-color: #ddd;
+            }
+
+            .admin-sanpham-table > table tr td, .admin-sanpham-table > table tr th {
+                border: 1px solid #ccc;
+                text-align: left;
+                padding: 10px;
+            }
+            
+            .admin-sanpham-table > table tr th{
+                background-color:gray;
+                color:white;
+            }
+            .admin-sanpham-table > table tr td a{
+                
+                color:black;
+            }

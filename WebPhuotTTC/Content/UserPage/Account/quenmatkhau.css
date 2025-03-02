@@ -1,0 +1,71 @@
+﻿.quenmatkhau-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    margin: 50px auto 50px auto;
+    border: 1px solid lightgray;
+}
+
+
+    .quenmatkhau-container .logo img {
+        margin: auto;
+    }
+
+    .quenmatkhau-container .title {
+        font-size: 24px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .quenmatkhau-container .description {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 30px;
+    }
+
+    .quenmatkhau-container .input-group {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+        .quenmatkhau-container .input-group label {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .quenmatkhau-container .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #a259ff;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+    .quenmatkhau-container .btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background: #a259ff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .quenmatkhau-container .link {
+        font-size: 14px;
+        color: #a259ff;
+        text-decoration: none;
+    }
+
+    .quenmatkhau-container .hidden {
+        display: none;
+    }

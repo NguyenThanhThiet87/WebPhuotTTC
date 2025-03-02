@@ -1,0 +1,63 @@
+﻿<link href="~/Content/FormLoginPartialView.css" rel="stylesheet" />
+<div class="auth-container">
+    <div class="form-container sign-in-container">
+        <h2>Sign in to TTC</h2>
+        <div class="form-social-icons">
+            <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="FaceBook">
+            <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google">
+            <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn">
+        </div>
+        <p>or use your email account</p>
+        <form id="form-sign-in" method="post" autocomplete="off">
+            <div class="form-input">
+                <i class="fa-solid fa-envelope"></i>
+                <input id="email-sign-in" name="email" type="email" placeholder="Email" required autocomplete="off" value="">
+            </div>
+            <div class="form-input">
+                <i class="fa-solid fa-key"></i>
+                <input id="password-sign-in" name="password" type="password" placeholder="Password" required autocomplete="off" value="">
+            </div>
+            <p><a href="@Url.Action("quenmatkhau","Account")">Forgot your password?</a></p>
+            <button>SIGN IN</button>
+        </form>
+    </div>
+    <div class="form-container sign-up-container">
+        <h2>Create Account</h2>
+        <div class="form-social-icons">
+            <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="FaceBook">
+            <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google">
+            <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn">
+        </div>
+        <p>or use your email for registration</p>
+        <form id="form-sign-up" method="post" autocomplete="off">
+            <div class="form-input">
+                <i class="fa-solid fa-user"></i>
+                <input id="name-sign-up" type="text" placeholder="Name" name="name" required autocomplete="off">
+            </div>
+            <div class="form-input">
+                <i class="fa-solid fa-envelope"></i>
+                <input id="email-sign-up" type="email" placeholder="Email" name="email" required autocomplete="off">
+            </div>
+            <div class="form-input">
+                <i class="fa-solid fa-key"></i>
+                <input id="password-sign-up" type="password" placeholder="Password" name="password" required autocomplete="off">
+            </div>
+            <button>SIGN UP</button>
+        </form>
+    </div>
+    <div class="toggle-container">
+        <div class="toggle">
+            <div class="toggle-left">
+                <h2>Hello, Friend!</h2>
+                <p>Join us today by creating an account and starting your journey!</p>
+                <button id="sign-up-btn">SIGN UP</button>
+            </div>
+            <div class="toggle-right">
+                <h2>Welcome Back!</h2>
+                <p>Log in with your account to stay connected and continue your journey with us!</p>
+                <button id="sign-in-btn">SIGN IN</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/UserPage/Account/Account.js"></script>

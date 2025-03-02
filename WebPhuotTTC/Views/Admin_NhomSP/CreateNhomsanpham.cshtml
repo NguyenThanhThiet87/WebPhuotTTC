@@ -1,0 +1,20 @@
+﻿@model WebPhuotTTC.Models.NHOMSANPHAM
+<link href="~/Content/AdminPage/NhomSP/CreateNhomSP.css" rel="stylesheet" />
+<div class="admin-nhomsanpham-dialog_create">
+    <div>
+        <i id="close-btn" class="fa-solid fa-rectangle-xmark" style="color: black;" onclick="CloseDialog()"></i>
+        <h2>Tạo nhóm sản phẩm mới</h2>
+        @using (Html.BeginForm("CreateNhomsanpham", "Admin_NhomSP", FormMethod.Post))
+        {
+            <fieldset>
+                <br />
+                <label for="name">Tên Nhóm</label>
+                <input id="name" type="text" required name="TenNhom" value="" placeholder="Nhập tên nhóm" />
+                <br />
+                <br />
+                <input id="submit" type="submit" value="Thêm" />
+            </fieldset>
+        }
+    </div>
+</div>
+

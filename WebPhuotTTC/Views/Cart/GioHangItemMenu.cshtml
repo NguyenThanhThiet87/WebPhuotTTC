@@ -1,0 +1,11 @@
+﻿@if (Model != null)
+{
+    <div>
+        <i class="fas fa-shopping-cart"></i>
+        <span>@ViewBag.SoLuong</span>
+    </div>
+    <span>Giỏ hàng</span>
+    @Html.Action("GioHangShort", "Cart")
+
+    <script src="~/Scripts/UserPage/Cart/GioHang.js"></script>
+}

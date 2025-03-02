@@ -1,0 +1,65 @@
+﻿@model List<WebPhuotTTC.Models.DONHANG>
+@{
+    ViewBag.Title = "DonHang";
+    Layout = "~/Views/Shared/_AdminPage.cshtml";
+    var count = 0;
+}
+<link href="~/Content/AdminPage/DonHang/DonHang.css" / rel="stylesheet">
+<div class="admin-donhang-container">
+    <h2>
+        QUẢN LÝ ĐƠN ĐẶT HÀNG
+    </h2>
+    <div class="product-count">
+        Số Lượng: @Model.Count
+    </div>
+    <div class="search-container">
+        <input placeholder="Tìm kiếm sản phẩm..." type="text" />
+        <button>
+            Tìm kiếm
+        </button>
+    </div>
+    <div class="admin-donhang-table">
+        <table>
+            <tr>
+                <th width="10%">STT</th>
+                <th width="10%">Mã Đơn Hàng</th>
+                <th width="20%">Khách Hàng</th>
+                <th width="10%">Tổng Tiền</th>
+                <th width="10%">Trạng Thái</th>
+                <th width="20%">Chức Năng</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count</td>
+                    <td>@item.MaDonHang</td>
+                    <td>@item.NGUOIDUNG.HoTen</td>
+                    <td>@String.Format("{0:N0}", @item.TongTien).Replace(',', '.')&#8363;</td>
+                    <td>@item.TRANGTHAI.TenTrangThai</td>
+                    <td style="text-align:center;">
+                        <a href="@Url.Action("DetailDonHang", "Admin_DonHang", new { id=@item.MaDonHang})">Xem chi tiết</a>
+                        |
+                        @Ajax.ActionLink("Cập nhật trạng thái", "EditDonHang", "Admin_DonHang", new { id =item.MaDonHang }, new AjaxOptions
+                        {
+                          HttpMethod = "GET",
+                          InsertionMode = InsertionMode.Replace,
+                          UpdateTargetId = "dialog"
+                        })
+                        |
+                        @Ajax.ActionLink("Xóa", "DeleteDonHang", "Admin_DonHang", new { id = @item.MaDonHang }, new AjaxOptions
+                        {
+                         HttpMethod = "GET",
+                         InsertionMode = InsertionMode.Replace,
+                         UpdateTargetId = "dialog"
+                        })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+    <div id="dialog">
+        <!-- DISPLAY DIALOG-->
+    </div>
+</div>

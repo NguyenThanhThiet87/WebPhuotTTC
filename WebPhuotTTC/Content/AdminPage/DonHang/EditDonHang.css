@@ -1,0 +1,67 @@
+﻿.admin-donhang-dialog_edit {
+    z-index: 2;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    background-color: #00a6e6;
+    border-radius: 10px;
+    position: fixed;
+    min-width: 470px;
+    min-height: 265px;
+}
+
+    .admin-donhang-dialog_edit > div {
+        position: relative;
+        padding: 20px;
+    }
+
+    .admin-donhang-dialog_edit .fa-rectangle-xmark {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        font-size: 30px;
+    }
+
+        .admin-donhang-dialog_edit .fa-rectangle-xmark:hover {
+            transform: scale(1.1);
+        }
+    .admin-donhang-dialog_edit h2 {
+        margin-bottom: 15px;
+    }
+
+    .admin-donhang-dialog_edit fieldset {
+        padding: 20px 20px 10px 20px;
+        border: 2px solid white;
+    }
+    .admin-donhang-dialog_edit table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    .admin-donhang-dialog_edit th, .admin-donhang-dialog_edit td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .admin-donhang-dialog_edit th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .admin-donhang-dialog_edit label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .admin-donhang-dialog_edit select, .admin-donhang-dialog_edit input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }

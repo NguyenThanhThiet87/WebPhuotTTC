@@ -1,0 +1,93 @@
+﻿.admin-donhang-container {
+    width: 100%;
+    border: 1px solid gray;
+    margin: 20px auto 0px auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    margin-bottom: 20px;
+}
+
+    .button-container button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+
+.product-count {
+    margin-bottom: 20px;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+    .search-container input[type="text"] {
+        padding: 10px;
+        width: 80%;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .search-container button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+        .search-container button:hover {
+            background-color: #0056b3;
+        }
+
+.admin-donhang-table {
+    padding: 20px;
+    max-height: 60vh;
+    overflow-y: scroll;
+}
+
+    .admin-donhang-table > table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .admin-donhang-table > table tr {
+            border: 1px solid #ccc;
+            height: 50px;
+        }
+
+            .admin-donhang-table > table tr:hover {
+                background-color: #ddd;
+            }
+
+            .admin-donhang-table > table tr td, .admin-donhang-table > table tr th {
+                border: 1px solid #ccc;
+                text-align: left;
+                padding: 10px;
+            }
+
+            .admin-donhang-table > table tr th {
+                background-color: gray;
+                color: white;
+            }
+
+            .admin-donhang-table > table tr td a {
+                color: black;
+            }

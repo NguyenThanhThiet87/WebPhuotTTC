@@ -1,0 +1,35 @@
+﻿@model List<WebPhuotTTC.Models.ProductThumnail>
+<!-- Sản phẩm 1 -->
+@foreach (var item in Model)
+{
+    <div class="product-item">
+        <a href="@Url.Action("Detail", "Product", new { MaSP=@item.product.MaSanPham})" style="text-decoration:none">
+            <div class="product-card">
+
+                @{
+                    if (item.discount != null)
+                    {
+                        <div class="discount">Giảm @item.discount.TiLeGiamGia%</div>
+                    }
+                }
+                <img src="@Url.Content(item.product.AnhBia)" alt="helmet image">
+                <div class="product-info">
+                    <h1 class="product-name">@item.product.TenSanPham</h1>
+                    <div class="price-container">
+                        <p class="product-price">@String.Format("{0:N0}", item.product.Gia).Replace(',', '.')&#8363;</p>
+                        <p class="product-discount-price">@String.Format("{0:N0}", item.product.Gia - (item.discount != null ? ((item.product.Gia / 100) * item.discount.TiLeGiamGia) : 0)).Replace(',', '.')&#8363;</p>
+                    </div>
+                    <ul class="evaluate">
+                        <li>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </a>
+    </div>
+}
+<div class="load-more">
+    <button>Xem thêm sản phẩm (@ViewBag.TongSP)</button>
+</div>

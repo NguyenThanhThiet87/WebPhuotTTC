@@ -1,0 +1,50 @@
+﻿@model List<WebPhuotTTC.Models.CHITIETGIOHANG>
+<link href="~/Content/UserPage/Cart/GioHangShort.css" rel="stylesheet" />
+<div class="cart-container hide_element">
+    <i class="fa-solid fa-circle-xmark" onclick="DisplayCartShort()"></i>
+    <h1>Giỏ hàng </h1>
+    @{
+        if (Model.Count > 0)
+        {
+            using (Html.BeginForm("DatHang", "Cart", "post"))
+            {
+                foreach (var item in Model)
+                {
+                    <div class="product-cart">
+                        <input name="@item.QLSANPHAM.MaSanPham" type="checkbox" class="product-checkbox" checked onchange="checkEmptyItemSP()"/>
+                        <div class="blue-dot"></div>
+
+                        <img src="@item.QLSANPHAM.SANPHAM.AnhBia" alt="img">
+
+                        <div class="product-details">
+                            <div class="product-name">@item.QLSANPHAM.SANPHAM.TenSanPham</div>
+                            <div class="product-color">Màu: @item.QLSANPHAM.MAUSAC.TenMau</div>
+                            <div class="product-size">Size: @item.QLSANPHAM.MaKichThuoc</div>
+                        </div>
+
+                        <div class="quantity-section">
+                            <div class="product-price">@String.Format("{0:N0}", @item.DonGia).Replace(',', '.')&#8363;</div>
+                            <div class="quantity-selector">
+                                <button type="button" class="tru_btn" onclick="GiamSoLuong(this)">-</button>
+                                <input class="soluong-input" type="text" value="@item.SoLuong" onchange="LuuSoLuong(this, '@item.QLSANPHAM.MaSanPham','@item.QLSANPHAM.MaKichThuoc','@item.QLSANPHAM.MaMau')" onkeypress="if (event.key == " Enter") {event.preventDefault();}" />
+                                <button type="button" class="cong_btn" onclick="TangSoLuong(this)">+</button>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-trash" style="color: #db0000;" onclick="xoaSPGioHang('@item.MaSanPham','@item.MaKichThuoc','@item.MaMau')"></i>
+                    </div>
+                }
+                <div class="total-price">
+                    <span>Tổng tiền:</span>
+                    <span class="total-amount">@String.Format("{0:N0}", @ViewBag.TongTien).Replace(',', '.')&#8363;</span>
+                </div>
+                <button type="submit" id="dathangbtn">Đặt hàng</button>
+            }
+        }
+        else
+        {
+            <lottie-player id="animation-empty-cart" src="https://lottie.host/13a5158b-2038-4b3f-ac38-ce2ba51d5702/Y3Y4J9KlpT.json" background="##FFFFFF" speed="1" style="width: 40%; height: 100%" loop autoplay direction="1" mode="normal"></lottie-player>
+            <h1 style="font-weight: normal; font-size: 15px;">Chưa có sản phẩm nào trong giỏ hàng</h1>
+        }
+    }
+
+</div>

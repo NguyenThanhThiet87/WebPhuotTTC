@@ -1,0 +1,60 @@
+﻿.admin-thuonghieu-dialog_delete {
+    z-index: 2;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    background-color: #00a6e6;
+    border-radius: 10px;
+    position: fixed;
+    min-width:470px;
+    min-height:265px;
+}
+
+.admin-thuonghieu-dialog_delete >div{
+    position:relative;
+    padding:20px;
+    height:100%;
+}
+.admin-thuonghieu-dialog_delete .fa-rectangle-xmark{
+    position:absolute;
+    top:-20px;
+    right:-20px;
+    font-size:30px;
+}
+.admin-thuonghieu-dialog_delete .fa-rectangle-xmark:hover{
+    transform:scale(1.1);
+}
+
+.admin-thuonghieu-dialog_delete h2{
+    margin-bottom:5px;
+}
+.admin-thuonghieu-dialog_delete hr{
+    width:100%;
+    margin-bottom:15px;
+}
+.admin-thuonghieu-dialog_delete .title{
+    font-size:30px;
+    color:white;
+}
+.admin-thuonghieu-dialog_delete span{
+    color:black;
+}
+.admin-thuonghieu-dialog_delete p{
+    margin-bottom:10px;
+    color:white;
+}
+
+
+.admin-thuonghieu-dialog_delete input#submit{
+    padding:10px 20px;
+    border-radius:10px;
+    border:none;
+    margin-left:50%;
+    transform:translateX(-50%);
+    margin-top:10px;
+    background-color:red;
+    color:white;
+}
+.admin-thuonghieu-dialog_delete input#submit:hover{
+    background:gray;
+}

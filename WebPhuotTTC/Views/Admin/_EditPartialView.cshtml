@@ -1,0 +1,22 @@
+﻿@model WebPhuotTTC.Models.LOAISANPHAM
+<link href="../Content/AdminPage/PartialView/EditPartialView.css" rel="stylesheet" />
+<div class="admin-category-dialog_edit">
+    <div>
+        <i class="fa-solid fa-rectangle-xmark" style="color: black;" onclick="CloseDialog(event)"></i>
+        <h2>Edit</h2>
+        @using (Html.BeginForm("Edit","Admin", "POST"))
+        {
+            <fieldset>
+                <label for="type">Mã Loại</label>
+                <input id="type" type="text" required name="type" value="@Model.MaLoai" />
+                <br />
+                <br />
+                <label for="name">Tên Loại</label>
+                <input id="name" type="text" required name="name" value="@Model.TenLoai" />
+                <br />
+                <br />
+                <input id="submit" type="submit" value="LƯU" />
+            </fieldset>
+        }
+    </div>
+</div>

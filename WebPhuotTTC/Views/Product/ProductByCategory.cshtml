@@ -1,0 +1,105 @@
+﻿@using PagedList.Mvc;
+@model PagedList.PagedList<WebPhuotTTC.Models.ProductThumnail>
+
+@{
+    ViewBag.Title = "ProductByCategory";
+    Layout = "~/Views/Shared/_UserPage.cshtml";
+}
+<link href="~/Content/UserPage/Product/ProductByCategory.css" rel="stylesheet" />
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index","User")">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@Model[0].product.LOAISANPHAM.TenLoai</li>
+    </ol>
+</nav>
+<div class="product-category-container">
+    <div class="header">
+        Sắp xếp theo
+    </div>
+    <div class="sort-options">
+        <a href="@Url.Action("ProductByCategory", "Product", new { MaLoai = ViewBag.MaLoai, sort = "descrease" })">
+            @if (ViewBag.Sort == "descrease")
+            {
+                <button class="active">
+                    <i class="fas fa-sort-amount-down"></i> Giá Cao - Thấp
+                </button>
+            }
+            else
+            {
+                <button>
+                    <i class="fas fa-sort-amount-down"></i> Giá Cao - Thấp
+                </button>
+            }
+        </a>
+        <a href="@Url.Action("ProductByCategory", "Product", new { MaLoai = ViewBag.MaLoai, sort = "increase" })">
+            @if (ViewBag.Sort == "increase")
+            {
+                <button class="active">
+                    <i class="fas fa-sort-amount-up"></i> Giá Thấp - Cao
+                </button>
+            }
+            else
+            {
+                <button>
+                    <i class="fas fa-sort-amount-up"></i> Giá Thấp - Cao
+                </button>
+            }
+
+
+        </a>
+        <a href="@Url.Action("ProductByCategory", "Product", new { MaLoai = ViewBag.MaLoai, sort = " " })">
+            @if (ViewBag.Sort == " ")
+            {
+                <button class="active">
+                    <i class="fas fa-fire"></i> Khuyến Mãi Hot
+                </button>
+            }
+            else
+            {
+                <button>
+                    <i class="fas fa-fire"></i> Khuyến Mãi Hot
+                </button>
+            }
+        </a>
+    </div>
+    <div class="product-grid">
+        <!-- Sản phẩm 1 -->
+        @foreach (var item in Model)
+        {
+            <div class="product-item">
+                <a href="@Url.Action("Detail", "Product", new { MaSP=@item.product.MaSanPham})" style="text-decoration:none">
+                    <div class="product-card">
+
+                        @{
+                            if (item.discount != null)
+                            {
+                                <div class="discount">Giảm @item.discount.TiLeGiamGia%</div>
+                            }
+                        }
+                        <img src="@Url.Content(item.product.AnhBia)" alt="helmet image">
+                        <div class="product-info">
+                            <h1 class="product-name">@item.product.TenSanPham</h1>
+                            <div class="price-container">
+                                <p class="product-price">@String.Format("{0:N0}", item.product.Gia - (item.discount != null ? ((item.product.Gia / 100) * item.discount.TiLeGiamGia) : 0)).Replace(',', '.')&#8363;</p>
+                                <p class="product-discount-price">@String.Format("{0:N0}", item.product.Gia).Replace(',', '.')&#8363;</p>
+                            </div>
+                            <ul class="evaluate">
+                                @for (int i = 1; i <= @item.SaoTB; i++)
+                                {
+                                    <li>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+    <div class="menutrang">
+        @Html.PagedListPager(Model, page=>Url.Action("ProductByCategory",new { MaLoai= @ViewBag.MaLoai, sort= @ViewBag.Sort, page=page}))
+    </div>
+</div>

@@ -1,0 +1,42 @@
+﻿@model WebPhuotTTC.Models.NGUOIDUNG
+@{
+    ViewBag.Title = "PersonalInfomation";
+    Layout = "~/Views/Shared/_UserPage.cshtml";
+    
+}
+<link rel="stylesheet" href="~/Content/UserPage/Account/PersonalInfomation.css"/>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index","User")">Home</a></li>
+        <li class="breadcrumb-item"><a href="" onclick="history.back()">Quay lại</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Thông tin tài khoản</li>
+    </ol>
+</nav>
+<div class="personal_information">
+    <div>
+        <div class="personal_information_user">
+            <h2>Thông tin người dùng</h2>
+            <label for="name">Họ tên:</label>
+            <input type="text" id="name" class="input-block" name="name" value="@(Model.HoTen!=null?Model.HoTen:"Null")" readonly>
+            <label for="phone">Số điện thoại:</label>
+            <input type="text" id="phone" class="input-block" name="phone" value="@(Model.SDT != null ? Model.SDT : "Null")" readonly>
+            <label for="address">Địa chỉ:</label>
+            <input type="text" id="address" class="input-block" name="address" value="@(Model.DiaChi != null ? Model.DiaChi : "Null")" readonly>
+        </div>
+
+        <div class="personal_information_account">
+            <h2>Thông tin tài khoản</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" class="input-block" name="username" value="@(Model.Username != null ? Model.Username : "Null")" readonly>
+            <label for="password">Password:</label>
+            <input type="password" id="password" class="input-block" name="password" value="@(Model.Password != null ? Model.Password : "Null")" readonly>
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="input-block" name="email" value="@(Model.Email != null ? Model.Email : "Null")" readonly>
+        </div>
+    </div>
+    <div class="button-User_information">
+        <button id="editBtn">Sửa</button>
+        <button id="saveBtn" class="hide-element">Lưu</button>
+    </div>
+</div>
+<script src="~/Scripts/UserPage/Account/PersonalInformation.js"></script>

@@ -1,0 +1,80 @@
+﻿@model List<WebPhuotTTC.Models.CHITIETGIOHANG>
+@{
+    ViewBag.Title = "DatHang";
+    Layout = "~/Views/Shared/_UserPage.cshtml";
+}
+<link href="~/Content/UserPage/Cart/DatHang.css" rel="stylesheet" />
+@if (Model.Count <= 0)
+{
+    <h2>Dữ liệu rỗng</h2>
+}
+else
+{
+    <div class="dathang-container">
+        <div class="order-info">
+            <h2>THÔNG TIN ĐƠN HÀNG</h2>
+            <table>
+                <tr>
+                    <td><strong>Họ và tên:</strong> @Model[0].NGUOIDUNG.HoTen</td>
+                </tr>
+                <tr>
+                    <td><strong>Số điện thoại:</strong> @Model[0].NGUOIDUNG.SDT</td>
+                </tr>
+                <tr>
+                    <td><strong>Địa chỉ:</strong> @Model[0].NGUOIDUNG.DiaChi</td>
+                </tr>
+                <tr>
+                    <td><strong>Email:</strong> @Model[0].NGUOIDUNG.Email</td>
+                </tr>
+                <tr>
+                    <td><strong>Ngày đặt hàng:</strong> @DateTime.Now.ToShortTimeString() @DateTime.Now.ToShortDateString()</td>
+                </tr>
+                <tr>
+                    <td><strong>Thời gian nhận hàng dự kiến:</strong> @DateTime.Now.AddDays(3)</td>
+                </tr>
+                <tr>
+                    <td><strong>Lưu ý:</strong> ............</td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Phương thức thanh toán:</strong>
+                        <select id="payment-method">
+                            <option value="cod">Thanh toán khi nhận hàng</option>
+                            <option value="credit-card">Thẻ tín dụng</option>
+                            <option value="paypal">PayPal</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="product-info">
+            <div>
+                <h3>Sản Phẩm</h3>
+                @foreach (var item in Model)
+                {
+                    <div class="product">
+                        <img src="@item.QLSANPHAM.SANPHAM.AnhBia" alt="img">
+                        <div>
+                            <p><strong>@item.QLSANPHAM.SANPHAM.TenSanPham</strong></p>
+                            <p>Màu: @item.QLSANPHAM.MAUSAC.TenMau Kích thước: @item.QLSANPHAM.KICHTHUOC.MaKichThuoc</p>
+                            <p>Số lượng: @item.SoLuong</p>
+                            <p>Đơn giá: @String.Format("{0:N0}", @item.DonGia / item.SoLuong).Replace(',', '.')&#8363;</p>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="total">
+                Số tiền cần thanh toán: <span id="total-amount">@String.Format("{0:N0}", @ViewBag.TongTien).Replace(',', '.')&#8363; </span>
+            </div>
+
+            <div class="payment-button">
+                <a href="@Url.Action("XacNhanDatHang", "Cart", new { listSP = Model })">
+                    <button>Xác Nhận Đặt Hàng</button>
+                </a>
+            </div>
+        </div>
+    </div>
+}

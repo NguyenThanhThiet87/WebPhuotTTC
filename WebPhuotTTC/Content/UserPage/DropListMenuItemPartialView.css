@@ -1,0 +1,26 @@
+﻿.DropListMenu{
+    list-style:none;
+    background-color:white;
+    border-radius:10px;
+    border:1px solid gray;
+    padding:0px;
+    min-width:200px;
+    top:26px;
+}
+.DropListMenu li {
+    height:40px;
+}
+.DropListMenu li a{
+    text-decoration:none;
+    color:black;
+}
+.DropListMenu li div{
+    height:100%;
+    padding:10px 20px;
+}
+.DropListMenu li div i{
+    float:right;
+}
+.DropListMenu li:hover{
+    background-color:gray;
+}

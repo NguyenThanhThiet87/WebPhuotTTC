@@ -1,0 +1,24 @@
+﻿@model WebPhuotTTC.Models.GIAMGIA
+<link href="~/Content/AdminPage/Vourcher/DeleteVourcher.css" rel="stylesheet">
+<div class="admin-vourcher-dialog_delete">
+    <div>
+        <i class="fa-solid fa-rectangle-xmark" style="color: black;" onclick="CloseDialog(event)"></i>
+        <h2>Xóa thương hiệu</h2>
+        <hr />
+        @{
+            if (Model != null)
+            {
+                <p class="title">Bạn có chắc chắn muốn xóa</p>
+                <p><span>Vourcher:</span> @Model.NoiDungGiamGia</p>
+                using (Html.BeginForm("DeleteVourcher", "Admin_Vourcher", FormMethod.Post))
+                {
+                    <input id="submit" type="submit" value="Delete" />
+                }
+            }
+            else
+            {
+                <h4>Không thể xóa do có sản phẩm liên kết đến</h4>
+            }
+        }
+    </div>
+</div>

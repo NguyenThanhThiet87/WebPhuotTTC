@@ -1,0 +1,177 @@
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\WebPhuotTTC.dll.config
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\WebPhuotTTC.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\WebPhuotTTC.pdb
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Antlr3.Runtime.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\EntityFramework.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\EntityFramework.SqlServer.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.AspNet.Identity.Core.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Cookies.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Facebook.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Google.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.OAuth.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Twitter.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Web.Infrastructure.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Newtonsoft.Json.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Owin.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Helpers.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Mvc.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Optimization.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Razor.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\System.Web.WebPages.Deployment.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\System.Web.WebPages.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\System.Web.WebPages.Razor.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\WebGrease.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Helpers.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Mvc.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Optimization.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Razor.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\System.Web.WebPages.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\System.Web.WebPages.Deployment.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\System.Web.WebPages.Razor.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Newtonsoft.Json.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Antlr3.Runtime.pdb
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\EntityFramework.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\EntityFramework.SqlServer.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.AspNet.Identity.Core.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Facebook.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Cookies.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.OAuth.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Google.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Twitter.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\obj\Debug\WebPhuotTTC.csprojResolveAssemblyReference.cache
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\obj\Debug\WebPhuotTTC.dll
+D:\ASP.Net\WebPhuotTTC\WebPhuotTTC\obj\Debug\WebPhuotTTC.pdb
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\WebPhuotTTC.dll.config
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\WebPhuotTTC.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\WebPhuotTTC.pdb
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Antlr3.Runtime.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\CloudinaryDotNet.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\EntityFramework.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\EntityFramework.SqlServer.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.AspNet.Identity.Core.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Cookies.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Facebook.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Google.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.OAuth.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Twitter.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Web.Infrastructure.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Newtonsoft.Json.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Owin.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\PagedList.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\PagedList.Mvc.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Helpers.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Mvc.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Optimization.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Razor.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.WebPages.Deployment.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.WebPages.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.WebPages.Razor.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\WebGrease.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\PagedList.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\PagedList.Mvc.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Helpers.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Mvc.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Optimization.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Razor.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.WebPages.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.WebPages.Deployment.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.WebPages.Razor.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Antlr3.Runtime.pdb
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\EntityFramework.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\EntityFramework.SqlServer.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.AspNet.Identity.Core.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Facebook.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Cookies.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.OAuth.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Google.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Twitter.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\obj\Debug\WebPhuotTTC.dll
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\obj\Debug\WebPhuotTTC.pdb
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\obj\Debug\WebPhuotTTC.csproj.AssemblyReference.cache
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\obj\Debug\WebPhuotTTC.csproj.CoreCompileInputs.cache
+D:\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\obj\Debug\WebPhuot.3F9C7AB9.Up2Date
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\WebPhuotTTC.dll.config
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\WebPhuotTTC.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\WebPhuotTTC.pdb
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Antlr3.Runtime.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\CloudinaryDotNet.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\EntityFramework.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\EntityFramework.SqlServer.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.AspNet.Identity.Core.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Cookies.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Facebook.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Google.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.OAuth.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Twitter.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Web.Infrastructure.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Newtonsoft.Json.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Owin.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\PagedList.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\PagedList.Mvc.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Helpers.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Mvc.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Optimization.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Razor.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.WebPages.Deployment.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.WebPages.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.WebPages.Razor.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\WebGrease.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\PagedList.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\PagedList.Mvc.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Helpers.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Mvc.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Optimization.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.Razor.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.WebPages.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.WebPages.Deployment.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\System.Web.WebPages.Razor.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Antlr3.Runtime.pdb
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\EntityFramework.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\EntityFramework.SqlServer.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.AspNet.Identity.Core.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Facebook.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Cookies.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.OAuth.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Google.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.Twitter.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\obj\Debug\WebPhuotTTC.csproj.AssemblyReference.cache
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\obj\Debug\WebPhuotTTC.csproj.CoreCompileInputs.cache
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\obj\Debug\WebPhuot.3F9C7AB9.Up2Date
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\obj\Debug\WebPhuotTTC.dll
+F:\OnDrive\OneDrive - VipPro\StudenNCT\Web\ProjectWeb\WebPhuotTTC\WebPhuotTTC\obj\Debug\WebPhuotTTC.pdb

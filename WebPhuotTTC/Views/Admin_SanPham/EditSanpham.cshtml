@@ -1,0 +1,116 @@
+﻿@model WebPhuotTTC.Models.SANPHAM
+
+<link href="../Content/AdminPage/SanPham/EditSanpham.css" rel="stylesheet" />
+<div class="admin-sanpham-dialog_edit">
+    <div>
+        <i class="fa-solid fa-rectangle-xmark" style="color: black;" onclick="CloseDialog(event)"></i>
+        <h2>Chỉnh sửa sản phẩm</h2>
+        @using (Html.BeginForm("EditSanpham", "Admin_SanPham", FormMethod.Post, new { id = Model.MaSanPham }))
+        {
+            @Html.ValidationSummary(true)
+            <fieldset class="container">
+                <div class="form-group">
+                    <label for="TenSanPham">Tên Sản Phẩm</label>
+                    <input type="text" id="productName" placeholder="Nhập tên sản phẩm" name="TenSanPham" value="@Model.TenSanPham">
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="MoTa">Mô Tả</label>
+                    <textarea id="productDescription" placeholder="Nhập mô tả sản phẩm" name="MoTa">@Model.MoTa</textarea>
+                </div>
+                <br />
+                <br />
+                <div class="form-group">
+                    <label for="Gia">Giá</label>
+                    <input type="text" id="price" placeholder="Nhập giá sản phẩm" name="Gia" value="@Model.Gia">
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="ThuongHieu">Thương Hiệu</label>
+                    <select id="brand" name="MaThuongHieu">
+                        @foreach (var item in ViewBag.ThuongHieu)
+                        {
+                            if (item.MaThuongHieu == Model.MaThuongHieu)
+                            {
+                                <option selected value="@item.MaThuongHieu">@item.TenThuongHieu</option>
+                            }
+                            else
+                            {
+                                <option value="@item.MaThuongHieu">@item.TenThuongHieu</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="LoaiSP">Loại Sản Phẩm</label>
+                    <select id="productType" name="MaLoai">
+                        @foreach (var item in ViewBag.LoaiSP)
+                        {
+                            if (item.MaLoai == Model.MaLoai)
+                            {
+                                <option selected value="@item.MaLoai">@item.TenLoai</option>
+                            }
+                            else
+                            {
+                                <option value="@item.MaLoai">@item.TenLoai</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="BaoHanh">Bảo Hành</label>
+                    <select id="warranty" name="MaBaoHanh">
+                        @foreach (var item in ViewBag.BaoHanh)
+                        {
+                            if (item.MaBaoHanh == Model.MaBaoHanh)
+                            {
+                                <option selected value="@item.MaBaoHanh">@item.ThoiGianBH</option>
+                            }
+                            else
+                            {
+                                <option value="@item.MaBaoHanh">@item.ThoiGianBH</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <br />
+
+                <button class="submit-btn">Cập Nhật</button>
+            </fieldset>
+        }
+    </div>
+</div>
+<script>
+    function addVersion() {
+        var versionContainer = document.getElementById('versionContainer');
+        var newVersion = document.createElement('div');
+        newVersion.className = 'row';
+        var sizeOptions = '';
+        var colorOptions = '';
+        // Lấy danh sách kích thước từ ViewBag.KichThuoc
+        sizeOptions += '<div class="form-group"> <label>Kích Thước</label> <select id="size" name="Sizes">';
+        @foreach (var item in ViewBag.KichThuoc)
+        {
+            @:sizeOptions += '<option value="@item.MaKichThuoc">@item.MaKichThuoc</option>';
+        }
+        sizeOptions += '</select>  </div>';
+
+        // Lấy danh sách màu sắc từ ViewBag.MauSac
+        colorOptions += '<div class="form-group"><label>Màu sắc</label><select id="color" name="Colors">';
+       @foreach (var item in ViewBag.MauSac)
+        {
+            @:colorOptions += '<option value="@item.MaMau">@item.TenMau</option>';
+        }
+        colorOptions += '</select></div>';
+
+        // Gán HTML vào newVersion
+        newVersion.innerHTML = sizeOptions + colorOptions + '<div class="form-group"> <label>Số Lượng</label><input type="text" id="quantity" placeholder="Nhập số lượng" name="SoLuong" required> <br /> </div><i class="fa-solid fa-trash" style="color: #df1616; width: fit-content;"></i>';
+        versionContainer.appendChild(newVersion);
+    }
+    var removerVersion=function(e)
+    {
+        e.target.parentChild.remove();
+    }
+</script>

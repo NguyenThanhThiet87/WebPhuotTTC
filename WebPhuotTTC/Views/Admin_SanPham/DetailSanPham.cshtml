@@ -1,0 +1,49 @@
+﻿@model WebPhuotTTC.Models.ProductDetail
+@{
+    ViewBag.Title = "DetailSanPham";
+    Layout = "~/Views/Shared/_AdminPage.cshtml";
+}
+<link rel="stylesheet" href="~/Content/AdminPage/SanPham/DetailSanPham.css"/>
+<div class="admin-sanpham-detail-container">
+    <h2>CHI TIẾT SẢN PHẨM</h2>
+    <h5>Sản phẩm @Model.product.TenSanPham</h5>
+    <p><strong>Giá gốc:</strong> @Model.product.Gia</p>
+    <p><strong>Thương hiệu:</strong> @Model.product.THUONGHIEU.TenThuongHieu</p>
+    <p><strong>Loại sản phẩm:</strong> @Model.product.LOAISANPHAM.TenLoai</p>
+    <span><strong>Ảnh bìa:</strong></span>
+    <img width="200"src="@Model.product.AnhBia" alt="img" />
+    <div class="images">
+        <span><strong>Ảnh liên quan: </strong></span>
+        @foreach(var item in Model.images)
+        {
+            <img src="@item.Url" alt="img"/>
+        }
+    </div>
+    <div class="admin-sanpham-detail">
+        <h4>Các phiên bản</h4>
+        <table>
+            <tr>
+                <th width="5%">STT</th>
+                <th width="25%">Tên Sản Phẩm</th>
+                <th width="15%">Kích thước</th>
+                <th width="15%">Màu sắc</th>
+                <th width="12%">Số lượng</th>
+            </tr>
+
+            @{ int count = 0;}
+            @foreach (var item in Model.detailProduct)
+            {
+                    count++;
+                    <tr>
+                        <td>@count</td>
+                        <td>@item.SANPHAM.TenSanPham</td>
+                        <td style="text-align:center;"> @item.MaKichThuoc</td>
+                        <td style="text-align:center;"> @item.MAUSAC.TenMau</td>
+                        <td style="text-align:left">@item.SoLuong</td>
+                    </tr>
+                
+            }
+        </table> 
+    </div>
+    @Html.ActionLink("Quay lại", "SanPham", "Admin")
+</div>

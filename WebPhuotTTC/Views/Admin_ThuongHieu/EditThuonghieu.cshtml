@@ -1,0 +1,21 @@
+﻿@model WebPhuotTTC.Models.THUONGHIEU
+<link href="../Content/AdminPage/ThuongHieu/EditThuongHieu.css" rel="stylesheet" />
+<div class="admin-thuonghieu-dialog_edit">
+    <div>
+        <i class="fa-solid fa-rectangle-xmark" style="color: black;" onclick="CloseDialog(event)"></i>
+        <h2>Sửa thương hiệu </h2>
+        @using (Html.BeginForm("EditThuonghieu", "Admin_ThuongHieu", "POST"))
+        {
+            <fieldset>
+                <br />
+                <br />
+                <label for="name">Tên Thương Hiệu</label>
+                <input id="name" type="text" required name="name" value="@Model.TenThuongHieu" />
+                <br />
+                <br />
+                <input id="submit" type="submit" value="LƯU" />
+            </fieldset>
+        }
+
+    </div>
+</div>

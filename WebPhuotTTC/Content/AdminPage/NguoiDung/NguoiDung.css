@@ -1,0 +1,65 @@
+﻿.admin-nguoidung-container {
+    width: 100%;
+    border: 1px solid gray;
+    margin: 20px auto 0px auto;
+}
+
+    .admin-nguoidung-container > div:first-child {
+        padding: 10px 30px;
+        border: 1px solid gray;
+    }
+
+        .admin-nguoidung-container > div:first-child button {
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: white;
+            background-color: #17abec;
+            border: none;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .admin-nguoidung-container > div:first-child button:hover {
+          background-color: #005efb;
+            
+        }
+        .admin-nguoidung-container > div:first-child button a{
+            text-decoration:none;
+        }
+        .admin-nguoidung-container > div:first-child p {
+            font-size: 18px;
+            margin-left: 10px;
+        }
+
+.admin-nguoidung-table {
+    padding: 20px;
+    max-height:68vh;
+    overflow-y:scroll;
+}
+
+    .admin-nguoidung-table > table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+        .admin-nguoidung-table > table tr {
+            border: 1px solid #ccc;
+            height: 50px;
+        }
+
+            .admin-nguoidung-table > table tr:hover {
+                background-color: #ddd;
+            }
+
+            .admin-nguoidung-table > table tr td, .admin-nguoidung-table > table tr th {
+                border: 1px solid #ccc;
+                text-align: left;
+                padding: 10px;
+            }
+            
+            .admin-nguoidung-table > table tr th{
+                background-color:gray;
+                color:white;
+            }
+            .admin-nguoidung-table > table tr td a{
+                
+                color:black;
+            }

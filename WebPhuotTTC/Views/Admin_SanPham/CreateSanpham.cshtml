@@ -1,0 +1,119 @@
+﻿@model WebPhuotTTC.Models.SANPHAM
+<link href="~/Content/AdminPage/SanPham/CreateSanPham.css" rel="stylesheet" />
+<div class="admin-sanpham-dialog_create">
+    <div>
+        <i class="fa-solid fa-rectangle-xmark" style="color: black;" onclick="CloseDialog(event)"></i>
+        <h2>Tạo sản phẩm mới</h2>
+        @using (Html.BeginForm("CreateSanpham", "Admin_SanPham", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <fieldset class="container">
+                <label for="productName">Tên Sản Phẩm</label>
+                <input type="text" id="productName" placeholder="Nhập tên sản phẩm" name="TenSanPham">
+
+                <label for="productDescription">Mô Tả</label>
+                <textarea id="productDescription" placeholder="Nhập mô tả sản phẩm" name="MoTa"></textarea>
+
+               <div class="img">
+                   Ảnh Bìa
+                   <input type="file" id="coverImage" placeholder="Nhập đường dẫn ảnh bìa" name="AnhBia" required>
+                   Một số ảnh khác
+                   <input type="file" name="AnhDetail" multiple required />
+               </div>
+
+                <label for="price">Giá</label>
+                <input type="text" id="price" placeholder="Nhập giá sản phẩm" name="Gia">
+
+                <label for="brand">Thương Hiệu</label>
+                <select id="brand" name="ThuongHieu">
+                    @foreach (var item in ViewBag.ThuongHieu)
+                    {
+                        <option value="@item.MaThuongHieu">@item.TenThuongHieu</option>
+                    }
+                </select>
+
+                <label for="productType">Loại Sản Phẩm</label>
+                <select id="productType" name="LoaiSP">
+                    @foreach (var item in ViewBag.LoaiSP)
+                    {
+                        <option value="@item.MaLoai">@item.TenLoai</option>
+                    }
+                </select>
+
+                <label for="warranty">Bảo Hành</label>
+                <select id="warranty" name="BaoHanh">
+                    @foreach (var item in ViewBag.BaoHanh)
+                    {
+                        <option value="@item.MaBaoHanh">@item.ThoiGianBH</option>
+                    }
+                </select>
+
+                <h3 style="color: #fff;">Phiên bản</h3>
+
+                <div id="versionContainer" class="version-container">
+                    <div class="row">
+                        Kích Thước
+                        <select id="size" name="Sizes">
+                            @foreach (var item in ViewBag.KichThuoc)
+                            {
+                                <option value="@item.MaKichThuoc">@item.MaKichThuoc</option>
+                            }
+                        </select>
+
+                        Màu sắc
+                        <select id="color" name="Colors">
+                            @foreach (var item in ViewBag.MauSac)
+                            {
+                                <option value="@item.MaMau">@item.TenMau</option>
+                            }
+                        </select>
+
+                        Số Lượng
+                        <input type="text" id="quantity" placeholder="Nhập số lượng" name="SoLuong" required>
+                        <br />
+                    </div>
+                </div>
+                <div class="version-btn">
+                    <button type="button" onclick="addVersion()">Thêm</button>
+                    <button type="button" onclick="removeVersion()">Xóa</button>
+                </div>
+
+               
+
+                <button class="submit-btn">Tạo</button>
+            </fieldset>
+        }
+    </div>
+</div>
+<script>
+    function addVersion() {
+        var versionContainer = document.getElementById('versionContainer');
+        var newVersion = document.createElement('div');
+        newVersion.className = 'row';
+        var sizeOptions = '';
+        var colorOptions = '';
+        // Lấy danh sách kích thước từ ViewBag.KichThuoc
+        sizeOptions += 'Kích Thước <select id="size" name="Sizes">';
+        @foreach (var item in ViewBag.KichThuoc)
+        {
+            @:sizeOptions += '<option value="@item.MaKichThuoc">@item.MaKichThuoc</option>';
+        }
+        sizeOptions += '</select>';
+
+        // Lấy danh sách màu sắc từ ViewBag.MauSac
+        colorOptions += 'Màu sắc<select id="color" name="Colors">';
+       @foreach (var item in ViewBag.MauSac)
+        {
+            @:colorOptions += '<option value="@item.MaMau">@item.TenMau</option>';
+        }
+        colorOptions += '</select>';
+
+        // Gán HTML vào newVersion
+        newVersion.innerHTML = sizeOptions + colorOptions + 'Số Lượng <input type="text" id="quantity" placeholder="Nhập số lượng" name="SoLuong" required> <br />';
+        versionContainer.appendChild(newVersion);
+    }
+    function removeVersion() {
+        var row = document.querySelectorAll("#versionContainer > div.row");
+        if(row.length>1)
+            row[row.length - 1].remove();
+    }
+</script>

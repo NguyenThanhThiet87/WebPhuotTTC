@@ -1,0 +1,17 @@
+﻿@model WebPhuotTTC.Models.SANPHAM
+<link href="~/Content/AdminPage/SanPham/DeleteSanPham.css" rel="stylesheet" />
+<div class="admin-sanpham-dialog_delete">
+    <div>
+        <i class="fa-solid fa-rectangle-xmark" style="color: black;" onclick="CloseDialog(event)"></i>
+        <h2>Delete</h2>
+        <hr />
+        <p class="title">Bạn có chắc chắn muốn xóa</p>
+        <p><span>Mã Sản phẩm:</span> @Model.MaSanPham</p>
+        <p><span>Tên Sản phẩm:</span> @Model.TenSanPham</p>
+        @using (Html.BeginForm("DeleteSanpham", "Admin_SanPham", FormMethod.Post, new { id = @Model.MaSanPham }))
+        {
+            <input id="submit" type="submit" value="Delete" />
+        }
+    </div>
+</div>
+

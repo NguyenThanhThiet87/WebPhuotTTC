@@ -1,0 +1,165 @@
+﻿body {
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+}
+
+header {
+    display: flex;
+    background-color: #00a6e6;
+    padding: 5px 30px;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+    header > div {
+        display: flex;
+        align-items: center;
+        padding: 5px 10px;
+        border: 1px solid white;
+        border-radius: 20px;
+    }
+
+    header .logo {
+        margin-left: -15px;
+        padding: 0px;
+        border: none;
+        border-radius: 0px;
+    }
+
+    header .logo_img {
+        width: 70px;
+    }
+
+    header .fas {
+        font-size: 25px;
+        margin-right: 5px;
+    }
+
+    header .location {
+        max-width: 120px;
+        padding: 5px 10px;
+        border: 1px solid white;
+        border-radius: 20px;
+    }
+
+    header .search-box {
+        width: 20%;
+        border: 1px solid gray;
+        background-color: white;
+        padding: 8px 15px;
+        border-radius: 10px;
+        position:relative;
+    }
+
+        header .search-box input {
+            height: 100%;
+            width: 90%;
+            border: none;
+            outline: none;
+        }
+
+    header .cart {
+        padding: 15px 10px;
+        position: relative;
+    }
+
+        header .cart > div:first-child {
+            position: relative;
+        }
+
+            header .cart > div:first-child > span {
+                position: absolute;
+                top: -9px;
+                left: 23px;
+                border-radius: 50%;
+                background-color: red;
+                padding: 0px 5px;
+                font-size: 11px;
+            }
+
+    header .login:hover, header .location:hover {
+        background-color: #99e0f5;
+    }
+
+
+/*Footer*/
+footer {
+    background-image: url("https://res.cloudinary.com/duouljna1/image/upload/v1728300512/Background/bg_footer_ttz9rr.webp");
+    color: white;
+    padding: 30px 30px 1px 30px;
+}
+
+.footer_top {
+    display: flex;
+    column-gap: 10px;
+}
+
+.logo {
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+}
+
+.logo_img {
+    width: 100px;
+}
+
+.footer_top_info {
+    width: 34%;
+}
+
+.format-section-footer {
+    width: 32%;
+    border-left: solid 1px white;
+    padding: 0px 20px 20px 20px;
+}
+
+.footer_bottom {
+    text-align: center;
+    margin-top: 75px;
+}
+
+.footer_top_instruct > ul > li > a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer_top_founder > ul {
+    list-style: none;
+}
+
+.justify-text {
+    text-align: justify;
+}
+
+.hide_element {
+    display: none;
+}
+
+.account-frame {
+    position: fixed;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+}
+
+    .account-frame > i {
+        position: absolute;
+        z-index: 6;
+        top: -8px;
+        right: -8px;
+        font-size: 30px;
+        color: gray;
+    }
+
+        .account-frame > i:hover {
+            transform: scale(1.1);
+        }
+
+.hide-element {
+    display: none;
+}

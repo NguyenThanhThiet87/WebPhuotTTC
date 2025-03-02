@@ -1,0 +1,143 @@
+﻿.product-category-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+    .product-category-container .header {
+        text-align: left; /* Căn chữ về phía trái */
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px; /* Giảm khoảng cách phía dưới */
+        padding: 0 10px; /* Thêm padding bên trái và bên phải */
+        color: #333; /* Màu chữ */
+    }
+
+    .product-category-container .sort-options {
+        display: flex;
+        justify-content: flex-start; /* Căn về phía trái */
+        margin-bottom: 20px;
+    }
+
+        .product-category-container .sort-options button {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin: 0 10px; /* Khoảng cách giữa các nút */
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            .product-category-container .sort-options button.active {
+                background-color: #ff4d4d;
+                color: #fff;
+                border: none;
+            }
+
+    .product-category-container .product-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 35px 2%;
+        width: 100%;
+    }
+
+        .product-category-container .product-grid .product-item {
+            width: 18%;
+        }
+
+    .product-category-container .product-card {
+        width: 100%;
+        height: 25vw;
+        border: 1px solid #ddd;
+        border-radius: 15px;
+        position: relative;
+        background-color: #fff;
+        color: #000;
+        overflow: hidden;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+        .product-category-container .product-card img {
+            width: 100%;
+            height: 65%;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        .product-category-container .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-category-container .product-card .product-info {
+            width: 100%;
+            height: 35%;
+            padding: 10px;
+            min-height: 170px;
+            max-height: 200px;
+        }
+
+
+            .product-category-container .product-card .product-info .product-name {
+                font-size: 1vw;
+                font-weight: bold;
+                margin: 0.5vw 0;
+            }
+
+
+            .product-category-container .product-card .product-info .price-container {
+                display: flex;
+                align-items: center;
+                column-gap: 2vw;
+            }
+
+
+                .product-category-container .product-card .product-info .price-container .product-price {
+                    font-size: 1vw;
+                    color: #ff0000;
+                    font-weight: bold;
+                    margin: 0.5vw 0;
+                }
+
+
+                .product-category-container .product-card .product-info .price-container .product-discount-price {
+                    font-size: calc(1vw - 2px);
+                    color: gray;
+                    text-decoration: line-through;
+                    margin: 0.5vw 0;
+                }
+
+
+            .product-category-container .product-card .product-info .evaluate {
+                display: flex;
+                column-gap: 2px;
+                font-size: calc(1vw - 6px);
+                list-style: none;
+                padding-left: 0px;
+                margin-bottom: 0px;
+            }
+
+        .product-category-container .product-card .discount {
+            background-image: url("https://res.cloudinary.com/duouljna1/image/upload/v1728300796/Resource/discount_ljp6vc.png");
+            position: absolute;
+            top: -3px;
+            color: white;
+            left: -3px;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+.menutrang {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+    .menutrang li {
+        padding: 5px 10px;
+        text-align: center;
+        border: 1px solid lightgray;
+    }
+
+        .menutrang li.active {
+            background-color: lightgray;
+        }

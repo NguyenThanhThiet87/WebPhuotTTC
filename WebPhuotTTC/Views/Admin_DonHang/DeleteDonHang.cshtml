@@ -1,0 +1,24 @@
+﻿@model WebPhuotTTC.Models.DONHANG
+<link href="~/Content/AdminPage/DonHang/DeleteDonHang.css" rel="stylesheet" />
+<div class="admin-donhang-dialog_delete">
+    <div>
+        <i class="fa-solid fa-rectangle-xmark" style="color: black;" onclick="CloseDialog(event)"></i>
+        <h2>Xóa đơn hàng</h2>
+        <hr />
+        @{
+            if (Model != null)
+            {
+                <p class="title">Bạn có chắc chắn muốn xóa</p>
+                <p><span>Mã đơn hàng:</span> @Model.MaDonHang</p>
+                using (Html.BeginForm("DeleteDonHang", "Admin_DonHang", "POST"))
+                {
+                    <input id="submit" type="submit" value="Delete" />
+                }
+            }
+            else
+            {
+                <h4>Không thể xóa do có sản phẩm liên kết đến</h4>
+            }
+        }
+    </div>
+</div>

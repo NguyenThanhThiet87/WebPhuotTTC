@@ -1,0 +1,20 @@
+﻿@model WebPhuotTTC.Models.THUONGHIEU
+<link href="../Content/AdminPage/ThuongHieu/CreateThuongHieu.css" rel="stylesheet" />
+<div class="admin-thuonghieu-dialog_create">
+    <div>
+        <i class="fa-solid fa-rectangle-xmark" style="color: black;" onclick="CloseDialog(event)"></i>
+        <h2>Tạo thương hiệu mới</h2>
+        @using (Html.BeginForm("CreateThuonghieu", "Admin_ThuongHieu", FormMethod.Post))
+        {
+            <fieldset>
+                <br />
+                <br />
+                <label for="name">Tên thương hiệu</label>
+                <input id="name" type="text" required name="TenThuongHieu" value="" placeholder="Nhập tên thương hiệu" />
+                <br />
+                <br />
+                <input id="submit" type="submit" value="TẠO MỚI" />
+            </fieldset>
+        }
+    </div>
+</div>

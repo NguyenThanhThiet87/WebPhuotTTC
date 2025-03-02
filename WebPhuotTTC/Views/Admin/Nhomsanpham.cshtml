@@ -1,0 +1,59 @@
+﻿@model List<WebPhuotTTC.Models.NHOMSANPHAM>
+@{
+    ViewBag.Title = "Nhomsanpham";
+    Layout = "~/Views/Shared/_AdminPage.cshtml";
+}
+
+<link href="~/Content/AdminPage/NhomSP/NhomSP.css" rel="stylesheet" />
+<h2>Nhóm Sản Phẩm</h2>
+<div class="admin-nhomsanpham-container">
+    <div>
+        <button id="btn-create">
+            @Ajax.ActionLink("Tạo nhóm sản phẩm mới", "CreateNhomsanpham", "Admin_NhomSP", new AjaxOptions
+                 {
+                     HttpMethod = "GET",
+                     InsertionMode = InsertionMode.Replace,
+                     UpdateTargetId = "dialog"
+                 })
+        </button>
+        <p>Số Lượng: @Model.Count</p>
+    </div>
+    <div class="admin-nhomsanpham-table">
+        <table>
+            <tr>
+                <th width="5%">STT</th>
+                <th width="35%">Tên Nhóm</th>
+                <th width="20%">Chức Năng</th>
+            </tr>
+            @{int count = 0;}
+            @foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count</td>
+                    <td>@item.TenNhom</td>
+                    <td style="text-align:center;">
+                        @Ajax.ActionLink("Sửa", "EditNhomsanpham", "Admin_NhomSP", new { id = @item.MaNhom }, new AjaxOptions
+                 {
+                     HttpMethod = "GET",
+                     InsertionMode = InsertionMode.Replace,
+                     UpdateTargetId = "dialog"
+                 })
+                        |
+                        @Ajax.ActionLink("Xóa", "DeleteNhomsanpham", "Admin_NhomSP", new { id = @item.MaNhom }, new AjaxOptions
+                 {
+                     HttpMethod = "GET",
+                     InsertionMode = InsertionMode.Replace,
+                     UpdateTargetId = "dialog"
+                 })
+                    </td>
+                </tr>
+
+            }
+
+        </table>
+    </div>
+    <div id="dialog">
+        <!-- DISPLAY DIALOG-->
+    </div>
+</div>

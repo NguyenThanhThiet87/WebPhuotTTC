@@ -1,0 +1,33 @@
+﻿@model WebPhuotTTC.Models.GIAMGIA
+<link href="~/Content/AdminPage/Vourcher/EditVourcher.css" rel="stylesheet" />
+<div class="admin-vourcher-dialog_edit">
+    <div>
+        <i class="fa-solid fa-rectangle-xmark" style="color: black;" onclick="CloseDialog(event)"></i>
+        <h2>Sửa Giảm Giá</h2>
+        @using (Html.BeginForm("EditVourcher", "Admin_Vourcher", FormMethod.Post, new { id = @Model.MaGiamGia }))
+        {
+            <fieldset>
+                <br />
+                <br />
+                <label for="name">Nội dung giảm giá</label>
+                <input id="name" type="text" required name="NoiDungGiamGia" value="@Model.NoiDungGiamGia" />
+                <br />
+                <br />
+                <label for="name">Tỉ lệ giảm giá</label>
+                <input id="name" type="number" required name="TiLeGiamGia" value="@Model.TiLeGiamGia" placeholder="Nhập tỉ lệ giảm giá" />
+                <br />
+                <br />
+                <label for="name">Thời gian bắt đầu</label>
+                <input id="name" type="date" required name="ThoiGianBatDau" value="@(Model.ThoiGianBatDau.HasValue ? Model.ThoiGianBatDau.Value.ToString("yyyy-MM-dd") : "")" placeholder="Thời gian bắt đầu" />
+                <br />
+                <br />
+                <label for="name">Thời gian kết thúc</label>
+                <input id="name" type="date" required name="ThoiGianKetThuc" value="@(Model.ThoiGianBatDau.HasValue ? Model.ThoiGianKetThuc.Value.ToString("yyyy-MM-dd") : "")" placeholder="Thời gian kết thúc" />
+                <br />
+                <br />
+                <input id="submit" type="submit" value="LƯU" />
+            </fieldset>
+        }
+
+    </div>
+</div>

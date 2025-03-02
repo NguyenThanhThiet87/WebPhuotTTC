@@ -1,0 +1,67 @@
+﻿.personal_information {
+    background-color: #00a2ff;
+    border: 2px solid #bfbfbf;
+    border-radius: 15px;
+    padding: 50px;
+    width: 60vw;
+    margin:30px 50% 30px 50%;
+    transform:translateX(-50%);
+}
+
+.personal_information > div:first-child{
+    display:flex;
+    justify-content:space-between;
+}
+
+.personal_information_user,.personal_information_account{
+    width:48%;
+    padding:10px;
+}
+    .personal_information h2 {
+        text-align: center;
+        color: #000;
+        margin-bottom: 20px;
+    }
+
+
+    .personal_information label {
+        display: block;
+        margin-top: 10px;
+        font-size: 16px;
+        color: white;
+    }
+
+
+    .personal_information input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+
+
+.personal_information .button-User_information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.personal_information button {
+    width: 100px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+
+.personal_information button:hover {
+    transform:scale(1.1);
+    background-color:blue;
+}

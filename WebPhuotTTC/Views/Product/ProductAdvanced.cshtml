@@ -1,0 +1,73 @@
+﻿<link href="~/Content/UserPage/Product/ProductAdvanced.css" rel="stylesheet" />
+
+<div class="product-advanced">
+    <div class="product-advanced-info">
+        <p>Mũ Fullface</p>
+        <h1>Royal</h1>
+        <button>
+            <a href="@Url.Action("ProductByCategory", "Product", new { MaLoai ="00003",sort=" "})" style="text-decoration:none; color:white;">
+                Xem chi tiết
+            </a>
+        </button>
+
+    </div>.
+    <div id="product-advanced-images" class="swiper mySwiper product-advanced-images">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-title="Xin Chao">
+                <img src="https://res.cloudinary.com/duouljna1/image/upload/v1729592971/Mu%20bao%20hiem/Mu%CC%83%20Fullface/bc67608ae2cd27394c036d64035edc08_resize_w450_nl_LE_auto_x2-removebg-preview_ba2otu.png" class="d-block" alt="img" />
+            </div>
+            <div class="swiper-slide" data-title="Hello">
+                <img src="https://res.cloudinary.com/duouljna1/image/upload/v1729594349/mu-bao-hiem-fullface-royal-m138-2-kinh-co-den-led-tem-vang-1_LE_auto_x2-removebg-preview_u8e3gu.png" class="d-block" alt="img" />
+            </div>
+            <div class="swiper-slide" data-title="KK">
+                <img src="https://res.cloudinary.com/duouljna1/image/upload/v1729594950/25ec9a2555047d678b577a6a76df70d4.jpg_LE_auto_x2-removebg-preview_wcz9er.png" class="d-block" alt="img" />
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
+<script>
+    var swiper5 = new Swiper(".product-advanced-images", {
+        grabCursor: true,
+        effect: "creative",
+        creativeEffect: {
+            prev: {
+                shadow: false,
+                translate: ["-125%", 0, -800],
+                rotate: [0, 0, -90],
+            },
+            next: {
+                shadow: false,
+                translate: ["125%", 0, -800],
+                rotate: [0, 0, 90],
+            },
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (menu[index]) + '</span>';
+            },
+        },
+        on: {
+            slideChange: function () {
+                var activeSlide = this.slides[this.activeIndex];
+                var title = activeSlide.getAttribute("data-title");
+                document.querySelector(".product-advanced-info h1").textContent = title;
+
+                var info = document.getElementsByClassName("product-advanced-info")[0];
+                info.classList.add("hide_element");
+                setTimeout(function () {
+                    info.classList.remove("hide_element");
+                }, 200);
+            },
+        },
+    });
+</script>

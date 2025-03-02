@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/Shared/_AdminPage.cshtml";
+}
+
+<link href="~/Content/AdminPage/Category.css" rel="stylesheet" />
+<h2>Loại sản phẩm</h2>
+<div class="admin-category-container">
+    <div>
+        <button>Tạo loại sản phẩm mới</button>
+        <p>Số Lượng: @Model.Count</p>
+    </div>
+    <div class="admin-category-table">
+        <table>
+            <tr>
+                <th width="20%">Mã Loại</th>
+                <th width="60%">Tên Loại</th>
+                <th width="20%">Chức Năng</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>#@item.MaLoai</td>
+                    <td>@item.TenLoai</td>
+                    <td style="text-align:center;">
+                        @Ajax.ActionLink("Sửa", "Edit", "Admin", new { id = @item.MaLoai }, new AjaxOptions
+                 {
+                     HttpMethod = "GET",
+                     InsertionMode = InsertionMode.Replace,
+                     UpdateTargetId = "dialog"
+                 })
+                        |
+                        @Ajax.ActionLink("Xóa", "Delete", "Admin", new { id = @item.MaLoai }, new AjaxOptions
+                 {
+                     HttpMethod = "GET",
+                     InsertionMode = InsertionMode.Replace,
+                     UpdateTargetId = "dialog"
+                 })
+                    </td>
+                </tr>
+                
+            }
+
+        </table>
+    </div>
+    <div id="dialog">
+        <!-- DISPLAY DIALOG-->
+    </div>
+</div>
+<script src="~/Scripts/AdminPage/Category.js"></script>

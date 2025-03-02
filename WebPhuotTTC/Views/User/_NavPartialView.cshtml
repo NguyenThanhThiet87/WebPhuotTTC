@@ -1,0 +1,21 @@
+﻿@using System.Web.Mvc.Ajax
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+<nav>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#@item.MaNhom" data-ajax-success="DisplayDropListMenuItem('@item.MaNhom')" href="@Url.Action("DropListMenuItem", "User", new { MaNhom = @item.MaNhom })">
+                    <div>
+                        @item.TenNhom<i class="fas fa-caret-down"></i>
+                    </div>
+                </a>
+                <div id="@item.MaNhom" class="frameDropList">
+                    @*Drop list content*@
+                </div>
+            </li>
+        }
+    </ul>
+</nav>
+

@@ -1,0 +1,68 @@
+﻿.admin-loaisanpham-container {
+    width: 100%;
+    border: 1px solid gray;
+    margin: 20px auto 0px auto;
+}
+    .admin-loaisanpham-container > div:first-child {
+        padding: 10px 30px;
+        border: 1px solid gray;
+    }
+
+        .admin-loaisanpham-container > div:first-child button {
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: white;
+            background-color: #17abec;
+            border: none;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+            .admin-loaisanpham-container > div:first-child button:hover {
+                background-color: #005efb;
+            }
+
+            .admin-loaisanpham-container > div:first-child button a {
+                text-decoration: none;
+                color: white;
+            }
+
+        .admin-loaisanpham-container > div:first-child p {
+            font-size: 18px;
+            margin-left: 10px;
+        }
+
+.admin-loaisanpham-table {
+    padding: 20px;
+    max-height: 55vh;
+    overflow-y: scroll;
+}
+
+    .admin-loaisanpham-table > table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .admin-loaisanpham-table > table tr {
+            border: 1px solid #ccc;
+            height: 50px;
+        }
+
+            .admin-loaisanpham-table > table tr:hover {
+                background-color: #ddd;
+            }
+
+            .admin-loaisanpham-table > table tr td, .admin-loaisanpham-table > table tr th {
+                border: 1px solid #ccc;
+                text-align: left;
+                padding: 10px;
+            }
+
+            .admin-loaisanpham-table > table tr th {
+                background-color: gray;
+                color: white;
+            }
+
+            .admin-loaisanpham-table > table tr td a {
+                color: black;
+            }

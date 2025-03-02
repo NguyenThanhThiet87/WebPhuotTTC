@@ -1,0 +1,60 @@
+﻿@model List<WebPhuotTTC.Models.THUONGHIEU>
+@{
+    ViewBag.Title = "Thuonghieu";
+    Layout = "~/Views/Shared/_AdminPage.cshtml";
+}
+
+<link href="~/Content/AdminPage/ThuongHieu/ThuongHieu.css" rel="stylesheet" />
+<h2>Thương Hiệu</h2>
+<div class="admin-thuonghieu-container">
+    <div>
+        <button id="btn-thuonghieu-create">
+            @Ajax.ActionLink("Tạo thương hiệu mới", "CreateThuonghieu", "Admin_ThuongHieu", new AjaxOptions
+                 {
+                     HttpMethod = "GET",
+                     InsertionMode = InsertionMode.Replace,
+                     UpdateTargetId = "dialog"
+                 })
+    </button>
+    <p>Số Lượng: @Model.Count</p>
+</div>
+<div class="admin-thuonghieu-table">
+    <table>
+        <tr>
+            <th width="10%">STT</th>
+            <th width="60%">Tên Thương Hiệu </th>
+            <th width="20%">Chức Năng</th>
+        </tr>
+        @{ int count = 0;}
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.TenThuongHieu</td>
+                <td style="text-align:center;">
+                    @Ajax.ActionLink("Sửa", "EditThuonghieu", "Admin_ThuongHieu", new { id = @item.MaThuongHieu }, new AjaxOptions
+                 {
+                     HttpMethod = "GET",
+                     InsertionMode = InsertionMode.Replace,
+                     UpdateTargetId = "dialog"
+                 })
+                    |
+                    @Ajax.ActionLink("Xóa", "DeleteThuonghieu", "Admin_ThuongHieu", new { id = @item.MaThuongHieu }, new AjaxOptions
+                 {
+                     HttpMethod = "GET",
+                     InsertionMode = InsertionMode.Replace,
+                     UpdateTargetId = "dialog"
+                 })
+                </td>
+            </tr>
+
+        }
+
+    </table>
+</div>
+<div id="dialog">
+    <!-- DISPLAY DIALOG-->
+</div>
+</div>
+<script src="~/Scripts/AdminPage/Thuonghieu.js"></script>

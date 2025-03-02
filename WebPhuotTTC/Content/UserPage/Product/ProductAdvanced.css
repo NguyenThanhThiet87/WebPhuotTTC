@@ -1,0 +1,114 @@
+﻿.product-advanced {
+    width: 100vw;
+    aspect-ratio: 18 / 10;
+    display: flex;
+    background-image: url("https://res.cloudinary.com/duouljna1/image/upload/v1729173077/Background/Thi%E1%BA%BFt_k%E1%BA%BF_ch%C6%B0a_c%C3%B3_t%C3%AAn_1_eh7jes.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+    margin-left: -5vw;
+    margin-right: -5vw;
+    padding: 5vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-advanced-info {
+    width: 50%;
+    font-family: "Arimo", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 160px;
+    color: white;
+}
+
+    .product-advanced-info > p {
+        color: #aaaaaa;
+        font-size: 3vw;
+        margin-bottom: -25px;
+    }
+
+    .product-advanced-info > button {
+        padding: 15px 40px;
+        border-radius: 30px;
+        color: white;
+        font-weight: 900;
+        background: #0087fe;
+        border: none;
+        animation: bounceSlide 1s ease-in-out;
+    }
+
+        .product-advanced-info > button:hover {
+            transform: scale(1.1);
+        }
+
+    .product-advanced-info > h1 {
+        font-weight: 900;
+        font-size: 10vw;
+    }
+
+#product-advanced-images {
+    width: 49%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-advanced #product-advanced-images .swiper-slide > img {
+    margin: auto;
+    margin-top: 50%;
+    transform: translate(10px, -42%);
+}
+
+#product-advanced-images > .fa-circle-left {
+    top: 95%;
+    left: 40%;
+    transition: left 0.5s ease-in-out;
+    z-index: -1;
+    font-size: 30px;
+}
+
+#product-advanced-images.hover > .fa-circle-left {
+    display: block;
+    left: 11%;
+    z-index: 2;
+    opacity: 1 !important;
+}
+
+#product-advanced-images > .fa-circle-right {
+    z-index: -1;
+    top: 95%;
+    right: 40%;
+    transition: right 0.5s ease-in-out;
+    font-size: 30px;
+}
+
+#product-advanced-images.hover > .fa-circle-right {
+    display: block;
+    right: 15%;
+    z-index: 2;
+    opacity: 1 !important;
+}
+.hide_element {
+    animation: lightspeedInLeft 1s ease-out forwards;
+}
+
+@keyframes lightspeedInLeft {
+    0% {
+        transform: translateX(-100%) skewX(30deg); /* Di chuyển ra ngoài bên trái và nghiêng */
+        opacity: 0;
+    }
+
+    20% {
+        transform: translateX(20px) skewX(10deg); /* Di chuyển vào và nghiêng nhẹ */
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0) skewX(0); /* Đưa phần tử về vị trí ban đầu */
+        opacity: 1;
+    }
+}
